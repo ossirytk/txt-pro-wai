@@ -10,8 +10,9 @@ __pycache__/
 .Python
 src_images/
 image_output/
+output/
 src_text/
-txt_output
+text_output/
 build/
 develop-eggs/
 dist/
