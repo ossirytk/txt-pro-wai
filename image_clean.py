@@ -2,7 +2,7 @@ import cv2
 import sys
 import os
 
-def prepare_image_for_text(image_path, output_path="processed_image.png"):
+def prepare_image_for_text(image_path, output_path="processed_image.jpg"):
     if not os.path.exists(image_path):
         raise FileNotFoundError(f"Image not found: {image_path}")
 

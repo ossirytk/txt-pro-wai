@@ -11,7 +11,7 @@ __pycache__/
 src_images/
 image_output/
 src_text/
-txt_output
+text_output/
 build/
 develop-eggs/
 dist/
