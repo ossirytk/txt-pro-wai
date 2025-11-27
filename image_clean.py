@@ -1,8 +1,9 @@
 import cv2
 import sys
 import os
+from PIL import Image
 
-def prepare_image_for_text(image_path, output_path="processed_image.jpg"):
+def prepare_image_for_text(image_path, output_path="processed_image.png"):
     if not os.path.exists(image_path):
         raise FileNotFoundError(f"Image not found: {image_path}")
 
@@ -24,14 +25,13 @@ def prepare_image_for_text(image_path, output_path="processed_image.jpg"):
         None,
         fx=scale_factor,
         fy=scale_factor,
-        interpolation=cv2.INTER_CUBIC
+        interpolation=cv2.INTER_CUBIC,
     )
 
     # Save processed image
-    cv2.imwrite(output_path, resized)
-    print(f"Processed image saved to {output_path}")
-
-    return output_path
+    #cv2.imwrite(output_path, resized)
+    resized_image = Image.fromarray(resized)
+    resized_image.save(output_path)
 
 if __name__ == "__main__":
     if len(sys.argv) < 2:
