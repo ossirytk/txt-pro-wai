@@ -1,0 +1,2769 @@
+1
+00:00:03,800 --> 00:00:05,760
+<font color="#ffffff">The prophecy is clear.</font>
+
+2
+00:00:06,760 --> 00:00:09,920
+<font color="#ffffff">She is the child that shall</font>
+<font color="#ffffff">bring about the end of destiny.</font>
+
+3
+00:00:09,920 --> 00:00:11,240
+<font color="#ffff00">Lyra!</font>
+
+4
+00:00:11,240 --> 00:00:14,240
+<font color="#00ffff">A city in the sky,</font>
+<font color="#00ffff">a myriad of worlds</font>
+
+5
+00:00:14,240 --> 00:00:17,040
+<font color="#00ffff">of which the Magisterium</font>
+<font color="#00ffff">controls only one.</font>
+
+6
+00:00:17,040 --> 00:00:19,720
+<font color="#00ff00">They labelled</font>
+<font color="#00ff00">Dust as original sin</font>
+
+7
+00:00:19,720 --> 00:00:21,440
+<font color="#00ff00">to keep us on our knees.</font>
+
+8
+00:00:21,440 --> 00:00:23,160
+<font color="#00ff00">Lord Asriel needs to die.</font>
+
+9
+00:00:23,160 --> 00:00:25,160
+<font color="#ffff00">You're quite terrified of him,</font>
+<font color="#ffff00">aren't you?</font>
+
+10
+00:00:25,160 --> 00:00:29,000
+<font color="#00ffff">Lyra, it's an alethiometer.</font>
+<font color="#00ffff">It tells you the truth.</font>
+
+11
+00:00:29,000 --> 00:00:30,880
+<font color="#ffffff">ALETHIOMETER WHIRS</font>
+
+12
+00:00:29,000 --> 00:00:30,880
+<font color="#ffffff">It worked.</font>
+
+13
+00:00:30,880 --> 00:00:33,360
+<font color="#ffffff">Roger is my best friend.</font>
+<font color="#ffffff">My only friend.</font>
+
+14
+00:00:33,360 --> 00:00:34,640
+<font color="#00ffff">This is Mrs Coulter.</font>
+
+15
+00:00:34,640 --> 00:00:37,840
+<font color="#ffff00">We have an opportunity</font>
+<font color="#ffff00">to understand Dust.</font>
+
+16
+00:00:37,840 --> 00:00:41,320
+<font color="#ffffff">Why am I so important to her?</font>
+<font color="#00ff00">She's your mother, Lyra.</font>
+
+17
+00:00:41,320 --> 00:00:43,520
+<font color="#00ffff">We have to find out</font>
+<font color="#00ffff">what she's doing.</font>
+
+18
+00:00:43,520 --> 00:00:46,400
+<font color="#ffff00">Once we've ironed out the teething</font>
+<font color="#ffff00">problems...</font><font color="#ffffff"> Mother!</font>
+
+19
+00:00:46,400 --> 00:00:49,400
+<font color="#ffff00">..this will change the world.</font>
+
+20
+00:00:49,400 --> 00:00:51,640
+<font color="#00ffff">Lee Scoresby.</font>
+<font color="#00ffff">I can fight and I can fly.</font>
+
+21
+00:00:51,640 --> 00:00:53,120
+<font color="#ffffff">We need you. And the bear.</font>
+
+22
+00:00:53,120 --> 00:00:54,640
+<font color="#00ff00">Iorek Byrnison!</font>
+
+23
+00:00:54,640 --> 00:00:56,760
+<font color="#00ffff">You are going to need</font>
+<font color="#00ffff">all the help you can get.</font>
+
+24
+00:00:58,400 --> 00:00:59,840
+<font color="#ffffff">Call yourself a father?</font>
+
+25
+00:00:59,840 --> 00:01:01,480
+<font color="#ffff00">I think that's rather the point.</font>
+
+26
+00:01:01,480 --> 00:01:03,720
+<font color="#ffff00">I've never called myself a father.</font>
+
+27
+00:01:05,560 --> 00:01:06,600
+<font color="#ffffff">No!</font>
+
+28
+00:01:06,600 --> 00:01:08,400
+<font color="#00ff00">In war, there are casualties.</font>
+
+29
+00:01:08,400 --> 00:01:11,520
+<font color="#ffffff">Roger!</font>
+<font color="#00ff00">This is a war.</font>
+
+30
+00:01:12,800 --> 00:01:14,640
+<font color="#00ffff">Lyra, look.</font>
+
+31
+00:01:14,640 --> 00:01:16,440
+<font color="#ffffff">The city in the sky!</font>
+
+32
+00:01:17,920 --> 00:01:19,200
+<font color="#ffffff">GRUNTS</font>
+
+33
+00:01:19,200 --> 00:01:21,760
+<font color="#ffff00">I'm Will Parry.</font><font color="#ffffff"> Lyra Silvertongue.</font>
+
+34
+00:01:21,760 --> 00:01:24,680
+<font color="#ffff00">You're not from here, are you?</font>
+<font color="#ffff00">From this world? Me neither.</font>
+
+35
+00:01:24,680 --> 00:01:28,080
+<font color="#ffffff">I lost my best friend, and I think</font>
+<font color="#ffffff">about him every single day.</font>
+
+36
+00:01:28,080 --> 00:01:31,000
+<font color="#ffff00">My dad left me and my mum</font>
+<font color="#ffff00">to go off to the Arctic.</font>
+
+37
+00:01:31,000 --> 00:01:32,560
+<font color="#ffff00">He's dead.</font>
+
+38
+00:01:32,560 --> 00:01:34,960
+<font color="#00ff00">Mr Jopari, I've come here</font>
+<font color="#00ff00">humbly to ask for your help.</font>
+
+39
+00:01:34,960 --> 00:01:38,440
+<font color="#00ffff">The Subtle Knife.</font>
+<font color="#00ffff">It could slice between worlds.</font>
+
+40
+00:01:38,440 --> 00:01:39,760
+<font color="#00ff00">You have this knife, do you?</font>
+
+41
+00:01:39,760 --> 00:01:42,800
+<font color="#00ffff">I want to find</font>
+<font color="#00ffff">the person who does.</font>
+
+42
+00:01:42,800 --> 00:01:45,840
+<font color="#ffff00">Sorry, you are?</font>
+<font color="#ffffff">Lyra Silvertongue.</font><font color="#ffff00"> Mary Malone.</font>
+
+43
+00:01:45,840 --> 00:01:49,000
+<font color="#ffff00">We study something called</font>
+<font color="#ffff00">dark matter.</font><font color="#ffffff"> Must be Dust.</font>
+
+44
+00:01:49,000 --> 00:01:51,040
+<font color="#00ffff">My war was never</font>
+<font color="#00ffff">just with the Magisterium.</font>
+
+45
+00:01:51,040 --> 00:01:54,360
+<font color="#00ffff">There's a far more dangerous</font>
+<font color="#00ffff">power out there.</font>
+
+46
+00:01:54,360 --> 00:01:56,840
+<font color="#00ff00">Our child is in this world.</font>
+
+47
+00:01:56,840 --> 00:01:58,480
+<font color="#00ff00">My place is with her.</font>
+
+48
+00:02:00,160 --> 00:02:01,400
+<font color="#ffff00">Dad.</font>
+
+49
+00:02:01,400 --> 00:02:03,560
+<font color="#00ff00">You must go to Lord Asriel</font>
+
+50
+00:02:03,560 --> 00:02:05,480
+<font color="#00ff00">and tell him that</font>
+<font color="#00ff00">you have the only weapon</font>
+
+51
+00:02:05,480 --> 00:02:07,600
+<font color="#00ff00">that can destroy the Authority.</font>
+
+52
+00:02:07,600 --> 00:02:08,680
+<font color="#ffffff">GUNSHOT</font>
+
+53
+00:02:08,680 --> 00:02:10,200
+<font color="#ffff00">What are you?</font>
+
+54
+00:02:10,200 --> 00:02:11,440
+<font color="#ffffff">Angels.</font>
+
+55
+00:02:11,440 --> 00:02:15,040
+<font color="#ffffff">Save the girl...and the boy.</font>
+
+56
+00:02:15,040 --> 00:02:17,800
+<font color="#ffff00">If Asriel has angels on his side,</font>
+<font color="#ffff00">he can do anything.</font>
+
+57
+00:02:17,800 --> 00:02:22,680
+<font color="#ffffff">ANGELS: We stand with you,</font>
+<font color="#ffffff">Asriel Belacqua.</font>
+
+58
+00:02:22,680 --> 00:02:24,640
+<font color="#00ffff">Then let us prepare for war.</font>
+
+59
+00:02:24,640 --> 00:02:27,440
+<font color="#00ff00">I've discovered</font>
+<font color="#00ff00">the girl has another name.</font>
+
+60
+00:02:27,440 --> 00:02:29,800
+<font color="#ffff00">She is my daughter.</font>
+
+61
+00:02:29,800 --> 00:02:31,080
+<font color="#ffff00">She is my daughter!</font>
+
+62
+00:02:31,080 --> 00:02:33,200
+<font color="#00ff00">What is the child's name?</font>
+
+63
+00:02:33,200 --> 00:02:34,320
+<font color="#00ffff">Eve.</font>
+
+64
+00:02:35,520 --> 00:02:37,560
+<font color="#ffffff">She must be protected.</font>
+
+65
+00:02:38,840 --> 00:02:39,920
+<font color="#00ff00">Sacrifice...</font>
+
+66
+00:02:40,920 --> 00:02:43,480
+<font color="#00ff00">..whatever is necessary.</font>
+
+67
+00:02:43,480 --> 00:02:45,280
+<font color="#ffff00">We're out of danger.</font>
+
+68
+00:02:45,280 --> 00:02:49,800
+<font color="#ffff00">I'm taking you somewhere</font>
+<font color="#ffff00">entirely safe.</font>
+
+69
+00:02:58,960 --> 00:03:00,640
+<font color="#ffffff">For many millennia,</font>
+
+70
+00:03:00,640 --> 00:03:03,760
+<font color="#ffffff">the Authority has ruled</font>
+<font color="#ffffff">in the Kingdom of Heaven...</font>
+
+71
+00:03:04,920 --> 00:03:06,880
+<font color="#ffffff">..with absolute control.</font>
+
+72
+00:03:08,880 --> 00:03:12,320
+<font color="#ffffff">He named himself the Creator,</font>
+
+73
+00:03:12,320 --> 00:03:16,080
+<font color="#ffffff">the Father, the Almighty.</font>
+
+74
+00:03:16,080 --> 00:03:18,000
+<font color="#ffffff">He is none of those,</font>
+
+75
+00:03:18,000 --> 00:03:21,240
+<font color="#ffffff">but just an angel like ourselves.</font>
+
+76
+00:03:22,520 --> 00:03:25,800
+<font color="#ffffff">And he rules</font>
+<font color="#ffffff">with a dark angel by his side.</font>
+
+77
+00:03:28,480 --> 00:03:33,520
+<font color="#ffffff">We who fought for truth</font>
+<font color="#ffffff">were cast out of the Kingdom.</font>
+
+78
+00:03:35,480 --> 00:03:39,640
+<font color="#ffffff">Since then, we have</font>
+<font color="#ffffff">lived between the worlds,</font>
+
+79
+00:03:39,640 --> 00:03:42,480
+<font color="#ffffff">watching and waiting</font>
+
+80
+00:03:42,480 --> 00:03:44,000
+<font color="#ffffff">for vengeance.</font>
+
+81
+00:03:45,360 --> 00:03:48,960
+<font color="#ffffff">A spark of hope is alive</font>
+<font color="#ffffff">among humankind.</font>
+
+82
+00:03:50,160 --> 00:03:53,080
+<font color="#ffffff">A bold leader is rallying warriors.</font>
+
+83
+00:03:54,520 --> 00:03:56,720
+<font color="#ffffff">He may be mortal,</font>
+
+84
+00:03:56,720 --> 00:03:59,520
+<font color="#ffffff">but his ambitions</font>
+<font color="#ffffff">transcend his kind.</font>
+
+85
+00:04:01,560 --> 00:04:04,000
+<font color="#ffffff">A serpent has been summoned.</font>
+
+86
+00:04:04,000 --> 00:04:05,640
+<font color="#ffffff">A new Eve emerges.</font>
+
+87
+00:04:06,640 --> 00:04:09,720
+<font color="#ffffff">The time for a new rebellion...</font>
+
+88
+00:04:09,720 --> 00:04:11,800
+<font color="#ffffff">..is coming.</font>
+
+89
+00:04:23,360 --> 00:04:25,320
+<font color="#ffffff">THUNDER RUMBLES</font>
+
+90
+00:04:25,320 --> 00:04:26,560
+<font color="#ffff00">Lyra!</font>
+
+91
+00:04:30,200 --> 00:04:32,080
+<font color="#ffff00">Lyra!</font>
+
+92
+00:04:35,520 --> 00:04:37,680
+<font color="#ffff00">Lyra...</font>
+
+93
+00:04:54,760 --> 00:04:56,080
+<font color="#ffff00">I'm looking for a girl.</font>
+
+94
+00:04:56,080 --> 00:04:59,240
+<font color="#ffff00">Medium height, dark hair,</font>
+<font color="#ffff00">brown eyes.</font>
+
+95
+00:04:59,240 --> 00:05:01,600
+<font color="#ffff00">Her name's Lyra.</font>
+<font color="#ffff00">She has a daemon called Pan.</font>
+
+96
+00:05:05,920 --> 00:05:07,360
+<font color="#ffff00">She's missing.</font>
+
+97
+00:05:14,400 --> 00:05:16,600
+<font color="#ffff00">Help me.</font>
+
+98
+00:05:27,800 --> 00:05:29,400
+<font color="#ffff00">Tell me where she is.</font>
+
+99
+00:05:41,800 --> 00:05:43,960
+<font color="#ffffff">WIND WHISTLES</font>
+
+100
+00:06:05,520 --> 00:06:07,280
+<font color="#ffffff">ECHOING: Pan?</font>
+
+101
+00:06:11,640 --> 00:06:13,240
+<font color="#ffffff">Pan?</font>
+
+102
+00:06:23,120 --> 00:06:25,600
+<font color="#ffffff">ECHOING:</font><font color="#ffff00"> Lyra!</font>
+
+103
+00:06:25,600 --> 00:06:27,400
+<font color="#ffffff">Roger!</font>
+
+104
+00:06:27,400 --> 00:06:29,040
+<font color="#ffffff">Is that you?!</font>
+
+105
+00:06:29,040 --> 00:06:32,560
+<font color="#ffff00">I need you! Help me!</font>
+
+106
+00:06:32,560 --> 00:06:34,400
+<font color="#ffffff">Where are you?</font>
+
+107
+00:06:36,520 --> 00:06:38,080
+<font color="#ffffff">Roger!</font>
+
+108
+00:06:42,400 --> 00:06:45,200
+<font color="#ffffff">FOOTSTEPS APPROACH</font>
+
+109
+00:06:46,320 --> 00:06:47,920
+<font color="#ffffff">GROWLING</font>
+
+110
+00:06:49,000 --> 00:06:50,360
+<font color="#00ffff">Lyra.</font>
+
+111
+00:07:53,280 --> 00:07:57,040
+<font color="#ffffff">SNARLING</font>
+
+112
+00:07:58,640 --> 00:08:01,320
+<font color="#ffffff">RUSTLING</font>
+
+113
+00:08:32,000 --> 00:08:33,640
+<font color="#ffffff">LOW RUMBLING</font>
+
+114
+00:08:35,720 --> 00:08:37,480
+<font color="#00ff00">Come on. Come on.</font>
+
+115
+00:08:38,960 --> 00:08:40,080
+<font color="#00ff00">For goodness' sake.</font>
+
+116
+00:08:41,400 --> 00:08:44,000
+<font color="#00ffff">Craft may not be ready</font>
+<font color="#00ffff">for this.</font>
+
+117
+00:08:44,000 --> 00:08:46,040
+<font color="#00ff00">Well, that is on</font>
+<font color="#00ff00">the pair of us, is it not?</font>
+
+118
+00:08:48,600 --> 00:08:49,760
+<font color="#ffffff">GRUNTS</font>
+
+119
+00:08:49,760 --> 00:08:51,080
+<font color="#00ffff">Clear your mind.</font>
+
+120
+00:08:53,760 --> 00:08:56,680
+<font color="#ffffff">CRAFT GROANS</font>
+
+121
+00:08:56,680 --> 00:08:58,960
+<font color="#ffffff">BREATHES DEEPLY, SLOWLY</font>
+
+122
+00:09:12,960 --> 00:09:16,360
+<font color="#ffffff">MECHANICAL CLICKING</font>
+
+123
+00:09:16,360 --> 00:09:17,960
+<font color="#00ffff">We've lost the rear oscillator.</font>
+
+124
+00:09:22,000 --> 00:09:24,000
+<font color="#ffffff">GRUNTS</font>
+
+125
+00:09:30,920 --> 00:09:32,800
+<font color="#ffffff">CLICKING CONTINUES</font>
+
+126
+00:09:35,080 --> 00:09:37,640
+<font color="#00ff00">And...brace!</font>
+
+127
+00:11:40,200 --> 00:11:41,880
+<font color="#ffffff">GRUNTS SOFTLY</font>
+
+128
+00:14:13,400 --> 00:14:14,640
+<font color="#ffff00">Please.</font>
+
+129
+00:14:18,360 --> 00:14:20,240
+<font color="#ffff00">Let us go.</font>
+
+130
+00:14:22,200 --> 00:14:24,880
+<font color="#00ffff">Here, drink this.</font>
+
+131
+00:14:24,880 --> 00:14:27,240
+<font color="#ffffff">LYRA WHIMPERS</font>
+
+132
+00:14:27,240 --> 00:14:31,000
+<font color="#00ffff">If you don't drink your medicine,</font>
+<font color="#00ffff">how will you get better, darling?</font>
+
+133
+00:14:32,320 --> 00:14:33,680
+<font color="#00ffff">Hmm?</font>
+
+134
+00:14:33,680 --> 00:14:35,200
+<font color="#00ffff">Here.</font>
+
+135
+00:14:53,040 --> 00:14:54,800
+<font color="#ffffff">FAINT WHOOSHING</font>
+
+136
+00:14:56,000 --> 00:14:57,600
+<font color="#ffffff">GASPS</font>
+
+137
+00:15:03,800 --> 00:15:05,120
+<font color="#ffffff">KNIFE RINGS</font>
+
+138
+00:15:16,400 --> 00:15:19,680
+<font color="#ffffff">WHOOSHING</font>
+
+139
+00:15:47,240 --> 00:15:48,960
+<font color="#ffffff">ECHOING:</font><font color="#00ff00"> Don't be afraid.</font>
+
+140
+00:15:52,000 --> 00:15:53,400
+<font color="#ffff00">How...how did you...?</font>
+
+141
+00:15:53,400 --> 00:15:54,920
+<font color="#00ff00">We're not going to hurt you.</font>
+
+142
+00:15:55,960 --> 00:15:57,480
+<font color="#ffff00">What are you?</font>
+
+143
+00:15:57,480 --> 00:15:58,920
+<font color="#00ff00">Bene elim.</font>
+
+144
+00:16:00,320 --> 00:16:02,320
+<font color="#00ff00">Angels, in your language.</font>
+
+145
+00:16:02,320 --> 00:16:04,040
+<font color="#00ff00">We come to you in human form.</font>
+
+146
+00:16:05,000 --> 00:16:06,200
+<font color="#ffff00">Angels?</font>
+
+147
+00:16:07,200 --> 00:16:09,160
+<font color="#00ff00">We just want to talk.</font>
+
+148
+00:16:10,560 --> 00:16:12,280
+<font color="#ffff00">Stop following me.</font>
+
+149
+00:16:16,840 --> 00:16:18,880
+<font color="#ffffff">SLICING</font>
+
+150
+00:16:20,440 --> 00:16:21,920
+<font color="#00ff00">Aesahaettr.</font>
+
+151
+00:16:22,880 --> 00:16:24,560
+<font color="#00ffff">It's real.</font>
+
+152
+00:16:50,600 --> 00:16:51,760
+<font color="#ffffff">GROANS</font>
+
+153
+00:16:51,760 --> 00:16:53,920
+<font color="#00ff00">I think the craft</font>
+<font color="#00ff00">is pretty much done for.</font>
+
+154
+00:16:53,920 --> 00:16:57,480
+<font color="#00ffff">And how will we get back</font>
+<font color="#00ffff">to the Republic?</font>
+
+155
+00:16:57,480 --> 00:16:59,680
+<font color="#00ff00">We'll be able to figure</font>
+<font color="#00ff00">something out.</font>
+
+156
+00:17:02,280 --> 00:17:03,720
+<font color="#00ff00">See anything?</font>
+
+157
+00:17:03,720 --> 00:17:05,760
+<font color="#00ffff">It looks like the path is clear.</font>
+
+158
+00:17:05,760 --> 00:17:08,040
+<font color="#00ff00">Commander, let's go get our man.</font>
+
+159
+00:17:08,040 --> 00:17:10,320
+<font color="#ffffff">FLUTTERING OF WINGS</font>
+
+160
+00:17:14,520 --> 00:17:15,920
+<font color="#00ff00">Follow my lead.</font>
+
+161
+00:17:15,920 --> 00:17:17,760
+<font color="#ffffff">Hey. Hey!</font>
+
+162
+00:17:19,280 --> 00:17:20,600
+<font color="#ffff00">Clear.</font>
+
+163
+00:17:35,720 --> 00:17:36,920
+<font color="#00ff00">Are we secure?</font>
+
+164
+00:17:38,920 --> 00:17:40,320
+<font color="#ffffff">Clear.</font><font color="#ffff00"> Clear.</font>
+
+165
+00:17:40,320 --> 00:17:41,360
+<font color="#00ffff">All clear.</font>
+
+166
+00:17:47,000 --> 00:17:48,160
+<font color="#00ff00">Ogunwe?</font>
+
+167
+00:17:49,120 --> 00:17:51,800
+<font color="#00ff00">Which one of you</font>
+<font color="#00ff00">is Commander Ogunwe?</font>
+
+168
+00:17:56,840 --> 00:17:58,040
+<font color="#ffffff">I am.</font>
+
+169
+00:18:04,560 --> 00:18:08,160
+<font color="#ffffff">Who are you</font>
+<font color="#ffffff">and your little friends?</font>
+
+170
+00:18:08,160 --> 00:18:10,720
+<font color="#00ff00">I am Lord Asriel Belacqua.</font>
+
+171
+00:18:10,720 --> 00:18:13,880
+<font color="#00ff00">I intend to march</font>
+<font color="#00ff00">upon the Kingdom of Heaven</font>
+
+172
+00:18:13,880 --> 00:18:16,680
+<font color="#00ff00">and I should very</font>
+<font color="#00ff00">much like you to join me.</font>
+
+173
+00:18:16,680 --> 00:18:19,200
+<font color="#ffffff">I've heard stories about you.</font>
+
+174
+00:18:19,200 --> 00:18:22,400
+<font color="#ffffff">You have just</font>
+<font color="#ffffff">made war with the Temple.</font>
+
+175
+00:18:23,800 --> 00:18:25,440
+<font color="#ffffff">I'll let you fight that one.</font>
+
+176
+00:18:27,960 --> 00:18:30,520
+<font color="#00ffff">Listen to what he has to say.</font>
+
+177
+00:18:32,320 --> 00:18:35,960
+<font color="#00ff00">My friends and I,</font>
+<font color="#00ff00">we are not from your world.</font>
+
+178
+00:18:35,960 --> 00:18:37,960
+<font color="#00ff00">We have little interest</font>
+<font color="#00ff00">in your temple.</font>
+
+179
+00:18:37,960 --> 00:18:39,560
+<font color="#00ff00">We came here for you.</font>
+
+180
+00:18:39,560 --> 00:18:42,920
+<font color="#00ff00">Join with me in my fight</font>
+<font color="#00ff00">against the Authority.</font>
+
+181
+00:18:42,920 --> 00:18:45,200
+<font color="#00ff00">Look, I know that</font>
+<font color="#00ff00">we stand for the same thing.</font>
+
+182
+00:18:45,200 --> 00:18:47,000
+<font color="#00ff00">I know the number you command.</font>
+
+183
+00:18:47,000 --> 00:18:50,600
+<font color="#00ff00">I want your army,</font>
+<font color="#00ff00">but I need your leadership.</font>
+
+184
+00:18:51,920 --> 00:18:53,320
+<font color="#00ff00">Come with me.</font>
+
+185
+00:18:53,320 --> 00:18:55,240
+<font color="#00ff00">Be a part of the final victory.</font>
+
+186
+00:19:00,440 --> 00:19:02,720
+<font color="#ffffff">You can come with me.</font>
+
+187
+00:19:29,440 --> 00:19:32,440
+<font color="#ffff00">Welcome to Geneva,</font>
+<font color="#ffff00">Cardinal MacPhail.</font>
+
+188
+00:19:34,000 --> 00:19:35,520
+<font color="#00ffff">Father President, please.</font>
+
+189
+00:20:03,120 --> 00:20:04,400
+<font color="#00ff00">Father President.</font>
+
+190
+00:20:10,520 --> 00:20:12,960
+<font color="#ffffff">Tell me of this arrest.</font>
+
+191
+00:20:12,960 --> 00:20:15,480
+<font color="#00ff00">We recovered this material</font>
+<font color="#00ff00">from the site.</font>
+
+192
+00:20:16,480 --> 00:20:19,920
+<font color="#00ff00">It was recited before</font>
+<font color="#00ff00">an audience, many inebriated,</font>
+
+193
+00:20:19,920 --> 00:20:22,240
+<font color="#00ff00">and followed by feverish discussion</font>
+
+194
+00:20:22,240 --> 00:20:24,320
+<font color="#00ff00">and a grotesque exchange of ideas.</font>
+
+195
+00:20:39,200 --> 00:20:40,760
+<font color="#ffffff">Poems.</font>
+
+196
+00:20:52,520 --> 00:20:54,000
+<font color="#00ff00">Father Jerome.</font>
+
+197
+00:20:55,240 --> 00:20:57,040
+<font color="#ffffff">What do you think should be done?</font>
+
+198
+00:20:58,360 --> 00:21:00,440
+<font color="#00ff00">The author must be imprisoned</font>
+<font color="#00ff00">for heresy.</font>
+
+199
+00:21:11,040 --> 00:21:12,360
+<font color="#00ffff">Father Heyst.</font>
+
+200
+00:21:12,360 --> 00:21:15,400
+<font color="#00ffff">There were dozens more like it</font>
+<font color="#00ffff">hidden throughout the building.</font>
+
+201
+00:21:16,400 --> 00:21:18,800
+<font color="#00ffff">All attendees imprisoned,</font>
+
+202
+00:21:18,800 --> 00:21:21,600
+<font color="#00ffff">as well as anyone found in</font>
+<font color="#00ffff">possession of the author's work.</font>
+
+203
+00:21:21,600 --> 00:21:23,240
+<font color="#ffffff">Mm-hm.</font>
+
+204
+00:21:30,600 --> 00:21:31,920
+<font color="#ffffff">Father...?</font>
+
+205
+00:21:31,920 --> 00:21:33,640
+<font color="#ffff00">Gomez.</font>
+
+206
+00:21:33,640 --> 00:21:34,880
+<font color="#ffffff">Father Gomez.</font>
+
+207
+00:21:36,000 --> 00:21:38,720
+<font color="#ffffff">If you were in my position,</font>
+<font color="#ffffff">what would you do?</font>
+
+208
+00:21:38,720 --> 00:21:40,840
+<font color="#ffff00">Physical atonement.</font>
+
+209
+00:21:40,840 --> 00:21:42,440
+<font color="#ffff00">In public.</font>
+
+210
+00:21:43,480 --> 00:21:47,640
+<font color="#ffff00">For those charged with possession,</font>
+<font color="#ffff00">I'd choose perhaps the whip.</font>
+
+211
+00:21:47,640 --> 00:21:51,280
+<font color="#ffff00">For the author, something which</font>
+<font color="#ffff00">leaves a little more...</font>
+
+212
+00:21:52,760 --> 00:21:54,000
+<font color="#ffff00">..lasting damage.</font>
+
+213
+00:21:56,800 --> 00:22:00,480
+<font color="#ffff00">Fear is a gift.</font>
+<font color="#ffff00">It allows people to learn.</font>
+
+214
+00:22:03,600 --> 00:22:05,640
+<font color="#00ffff">He will make examples of us.</font>
+
+215
+00:22:05,640 --> 00:22:07,720
+<font color="#00ffff">Baruch, we do not have time.</font>
+
+216
+00:22:09,520 --> 00:22:11,280
+<font color="#00ff00">We need that knife.</font>
+
+217
+00:22:13,240 --> 00:22:14,840
+<font color="#ffff00">I told you to stop following me.</font>
+
+218
+00:22:14,840 --> 00:22:16,960
+<font color="#ffff00">How can you cut through worlds?</font>
+
+219
+00:22:16,960 --> 00:22:19,840
+<font color="#00ffff">We are made of</font>
+<font color="#00ffff">Dust and can pass through</font>
+
+220
+00:22:19,840 --> 00:22:21,720
+<font color="#00ffff">invisible spaces in the air,</font>
+
+221
+00:22:21,720 --> 00:22:24,440
+<font color="#00ffff">gateways into other worlds.</font>
+
+222
+00:22:24,440 --> 00:22:26,720
+<font color="#00ffff">We can see them, but you cannot.</font>
+
+223
+00:22:26,720 --> 00:22:30,000
+<font color="#00ff00">Balthamos and I have been</font>
+<font color="#00ff00">searching for Aesahaettr,</font>
+
+224
+00:22:30,000 --> 00:22:34,240
+<font color="#00ff00">for you,</font>
+<font color="#00ff00">because there is a great war coming.</font>
+
+225
+00:22:34,240 --> 00:22:37,680
+<font color="#00ff00">All conscious beings</font>
+<font color="#00ff00">are engaged in a battle already,</font>
+
+226
+00:22:37,680 --> 00:22:39,320
+<font color="#00ff00">though not all of us know it.</font>
+
+227
+00:22:39,320 --> 00:22:42,440
+<font color="#00ff00">The enemy's power is</font>
+<font color="#00ff00">growing stronger every minute,</font>
+
+228
+00:22:42,440 --> 00:22:44,920
+<font color="#00ff00">and you have the weapon</font>
+<font color="#00ff00">that will enable us to win.</font>
+
+229
+00:22:46,240 --> 00:22:48,680
+<font color="#00ff00">You must come</font>
+<font color="#00ff00">with us to Lord Asriel.</font>
+
+230
+00:22:48,680 --> 00:22:51,400
+<font color="#00ff00">He is gathering an army...</font>
+<font color="#ffff00">I know who he is.</font>
+
+231
+00:22:52,760 --> 00:22:54,840
+<font color="#ffff00">Someone told me about him.</font>
+
+232
+00:22:54,840 --> 00:22:56,120
+<font color="#ffff00">About all of it.</font>
+
+233
+00:22:56,120 --> 00:22:57,720
+<font color="#ffff00">The war.</font>
+
+234
+00:22:57,720 --> 00:23:01,080
+<font color="#ffff00">How I'm supposed to fight</font>
+<font color="#ffff00">alongside Asriel, with this.</font>
+
+235
+00:23:03,040 --> 00:23:04,680
+<font color="#ffff00">I can't go with you.</font>
+
+236
+00:23:04,680 --> 00:23:08,360
+<font color="#ffff00">I'm sorry.</font>
+<font color="#ffff00">I'm looking for my friend Lyra.</font>
+
+237
+00:23:08,360 --> 00:23:10,000
+<font color="#ffff00">Asriel's daughter.</font>
+
+238
+00:23:12,040 --> 00:23:13,840
+<font color="#ffff00">Not that he cares, but...</font>
+
+239
+00:23:13,840 --> 00:23:16,080
+<font color="#ffff00">..she's lost and she needs my help.</font>
+
+240
+00:23:16,080 --> 00:23:19,720
+<font color="#00ffff">You don't understand - that knife is</font>
+<font color="#00ffff">more important than you can imagine.</font>
+
+241
+00:23:19,720 --> 00:23:21,000
+<font color="#ffff00">No, YOU don't understand.</font>
+
+242
+00:23:21,000 --> 00:23:23,640
+<font color="#ffff00">Lyra's the most</font>
+<font color="#ffff00">important thing to me right now.</font>
+
+243
+00:23:24,960 --> 00:23:26,400
+<font color="#ffff00">I'm going to find her.</font>
+
+244
+00:23:26,400 --> 00:23:27,960
+<font color="#00ffff">You will come with us now!</font>
+
+245
+00:23:27,960 --> 00:23:30,680
+<font color="#ffff00">Or what?</font>
+<font color="#00ff00">I'm sorry about your friend.</font>
+
+246
+00:23:31,880 --> 00:23:33,400
+<font color="#00ff00">I can see she means a lot to you.</font>
+
+247
+00:23:34,760 --> 00:23:36,640
+<font color="#00ff00">Do you know what happened to her?</font>
+
+248
+00:23:36,640 --> 00:23:38,160
+<font color="#ffff00">We were attacked.</font>
+
+249
+00:23:38,160 --> 00:23:39,360
+<font color="#ffff00">She was taken.</font>
+
+250
+00:23:39,360 --> 00:23:41,240
+<font color="#00ff00">By who?</font><font color="#ffff00"> I don't know.</font>
+
+251
+00:23:41,240 --> 00:23:42,680
+<font color="#ffff00">I went ahead without her.</font>
+
+252
+00:23:42,680 --> 00:23:44,640
+<font color="#ffff00">I thought she would be safe.</font>
+
+253
+00:23:46,520 --> 00:23:48,480
+<font color="#ffff00">But when I came back,</font>
+<font color="#ffff00">she was gone.</font>
+
+254
+00:23:48,480 --> 00:23:51,360
+<font color="#ffff00">Whatever Asriel wants,</font>
+<font color="#ffff00">he can wait.</font>
+
+255
+00:23:54,160 --> 00:23:55,280
+<font color="#ffff00">I'm sorry.</font>
+
+256
+00:23:56,360 --> 00:23:59,000
+<font color="#00ffff">You do realise we're just going to</font>
+<font color="#00ffff">keep following you</font>
+
+257
+00:23:59,000 --> 00:24:02,360
+<font color="#00ffff">until you change your mind?</font><font color="#ffff00"> Well,</font>
+<font color="#ffff00">you can keep following me because...</font>
+
+258
+00:24:05,960 --> 00:24:08,640
+<font color="#ffff00">You've managed to find me</font>
+<font color="#ffff00">every time I've cut through.</font>
+
+259
+00:24:10,800 --> 00:24:12,520
+<font color="#ffff00">How?</font><font color="#00ffff"> The knife.</font>
+
+260
+00:24:12,520 --> 00:24:14,840
+<font color="#00ffff">It attracts Dust.</font>
+
+261
+00:24:14,840 --> 00:24:17,480
+<font color="#00ffff">We have senses that humans do not.</font>
+
+262
+00:24:20,520 --> 00:24:22,000
+<font color="#ffff00">Help me find her.</font>
+
+263
+00:24:22,000 --> 00:24:24,560
+<font color="#ffff00">If you can find me,</font>
+<font color="#ffff00">you can find Lyra.</font>
+
+264
+00:24:26,680 --> 00:24:28,600
+<font color="#ffff00">Take me to her.</font>
+
+265
+00:24:28,600 --> 00:24:31,000
+<font color="#ffff00">Then I'll come with you to Asriel.</font>
+
+266
+00:24:31,000 --> 00:24:33,440
+<font color="#00ffff">We do not have time.</font>
+
+267
+00:24:33,440 --> 00:24:36,520
+<font color="#00ffff">It will not take them long, Baruch.</font>
+<font color="#00ffff">They will find us.</font>
+
+268
+00:24:36,520 --> 00:24:38,000
+<font color="#00ff00">So we will be quick.</font>
+
+269
+00:24:39,160 --> 00:24:41,120
+<font color="#00ff00">Balthamos, we don't have a choice.</font>
+
+270
+00:24:42,120 --> 00:24:43,840
+<font color="#ffff00">This was Lyra's.</font>
+
+271
+00:24:46,680 --> 00:24:49,200
+<font color="#ffff00">She says it's powered</font>
+<font color="#ffff00">the same way as the knife.</font>
+
+272
+00:24:52,040 --> 00:24:53,920
+<font color="#ffff00">Maybe you can use it to find her.</font>
+
+273
+00:24:55,280 --> 00:24:56,920
+<font color="#00ff00">It's powered by Dust?</font>
+
+274
+00:24:58,040 --> 00:24:59,520
+<font color="#00ff00">Oh, yes.</font>
+
+275
+00:25:01,280 --> 00:25:03,200
+<font color="#00ff00">We will need a little time,</font>
+
+276
+00:25:03,200 --> 00:25:06,880
+<font color="#00ff00">but we will find her,</font>
+<font color="#00ff00">whatever world she is in.</font>
+
+277
+00:25:16,440 --> 00:25:18,560
+<font color="#ffffff">BUZZER</font>
+
+278
+00:25:33,320 --> 00:25:35,720
+<font color="#ffffff">ECHOING:</font><font color="#ffff00"> Lyra! Up here!</font>
+
+279
+00:25:35,720 --> 00:25:37,360
+<font color="#ffffff">Wait, I'm coming!</font>
+
+280
+00:25:41,280 --> 00:25:43,720
+<font color="#ffffff">Roger, what is this place?</font>
+
+281
+00:25:43,720 --> 00:25:45,480
+<font color="#ffff00">I hate it!</font>
+
+282
+00:25:45,480 --> 00:25:47,200
+<font color="#ffffff">Roger!</font>
+
+283
+00:25:48,400 --> 00:25:49,600
+<font color="#ffffff">Roger!</font>
+
+284
+00:25:49,600 --> 00:25:51,040
+<font color="#ffff00">I'm scared!</font>
+
+285
+00:25:51,040 --> 00:25:52,440
+<font color="#ffffff">Roger...</font>
+
+286
+00:25:54,240 --> 00:25:55,640
+<font color="#ffffff">Roger...</font>
+
+287
+00:26:18,720 --> 00:26:20,080
+<font color="#ffffff">Come on.</font>
+
+288
+00:26:33,480 --> 00:26:34,800
+<font color="#ffffff">Machi!</font>
+
+289
+00:26:36,240 --> 00:26:37,600
+<font color="#ffff00">Father!</font>
+
+290
+00:26:37,600 --> 00:26:39,440
+<font color="#ffffff">OGUNWE CHUCKLES</font>
+
+291
+00:26:40,920 --> 00:26:44,080
+<font color="#ffffff">God, I missed you. Oh, my sweet.</font>
+
+292
+00:26:45,400 --> 00:26:46,800
+<font color="#ffffff">Look at you.</font>
+
+293
+00:26:57,960 --> 00:26:59,640
+<font color="#ffffff">CHEERFUL CHATTER</font>
+
+294
+00:27:05,480 --> 00:27:06,920
+<font color="#ffffff">Daddy has work to do.</font>
+
+295
+00:27:08,040 --> 00:27:09,440
+<font color="#ffffff">I'll be right back.</font>
+
+296
+00:27:10,840 --> 00:27:12,360
+<font color="#ffffff">SNIFFS</font>
+
+297
+00:27:18,400 --> 00:27:20,840
+<font color="#00ff00">You have a beautiful little girl.</font>
+
+298
+00:27:25,880 --> 00:27:27,840
+<font color="#00ff00">How long since you last saw her?</font>
+
+299
+00:27:29,360 --> 00:27:31,920
+<font color="#ffffff">Ten months and 16 days.</font>
+
+300
+00:27:31,920 --> 00:27:34,360
+<font color="#ffffff">I had no hope of leaving that cell</font>
+
+301
+00:27:34,360 --> 00:27:37,440
+<font color="#ffffff">until you and your</font>
+<font color="#ffffff">cat came to recruit me.</font>
+
+302
+00:27:37,440 --> 00:27:38,800
+<font color="#00ff00">What?</font>
+
+303
+00:27:38,800 --> 00:27:42,000
+<font color="#ffffff">I'm trying to decide</font>
+<font color="#ffffff">if you're a madman...</font>
+
+304
+00:27:43,560 --> 00:27:45,200
+<font color="#ffffff">..or a genius.</font>
+
+305
+00:27:47,440 --> 00:27:49,920
+<font color="#00ff00">Well, I rather hoped</font>
+<font color="#00ff00">the two could coexist.</font>
+
+306
+00:27:53,320 --> 00:27:56,280
+<font color="#ffffff">So, Lord Asriel,</font>
+
+307
+00:27:56,280 --> 00:27:59,520
+<font color="#ffffff">tell me who your war is really</font>
+<font color="#ffffff">against and what you want from me.</font>
+
+308
+00:27:59,520 --> 00:28:01,560
+<font color="#00ff00">My fight is with</font>
+<font color="#00ff00">the Authority himself...</font>
+
+309
+00:28:01,560 --> 00:28:04,600
+<font color="#ffffff">You said that before,</font>
+<font color="#ffffff">but it's impossible.</font>
+
+310
+00:28:06,040 --> 00:28:09,680
+<font color="#ffffff">Humankind cannot</font>
+<font color="#ffffff">stand against its Creator.</font>
+
+311
+00:28:09,680 --> 00:28:12,720
+<font color="#00ff00">Well, he forces us to kneel at</font>
+<font color="#00ff00">his feet, but he is not the Creator.</font>
+
+312
+00:28:12,720 --> 00:28:14,760
+<font color="#00ff00">It's all a lie.</font>
+
+313
+00:28:14,760 --> 00:28:17,200
+<font color="#00ff00">He's an angel.</font>
+<font color="#ffffff">An angel?</font>
+
+314
+00:28:17,200 --> 00:28:18,400
+<font color="#00ff00">Nothing more.</font>
+
+315
+00:28:19,520 --> 00:28:21,160
+<font color="#ffffff">And how do you know all this?</font>
+
+316
+00:28:22,960 --> 00:28:24,880
+<font color="#ffffff">Even if it were true.</font>
+
+317
+00:28:26,400 --> 00:28:28,040
+<font color="#00ff00">Some millennia ago,</font>
+
+318
+00:28:28,040 --> 00:28:30,720
+<font color="#00ff00">another angel discovered</font>
+<font color="#00ff00">the Authority's secret.</font>
+
+319
+00:28:30,720 --> 00:28:34,360
+<font color="#00ff00">Now that angel, Xaphania,</font>
+<font color="#00ff00">sits on my council.</font>
+
+320
+00:28:37,200 --> 00:28:38,720
+<font color="#00ff00">Ogunwe,</font>
+
+321
+00:28:38,720 --> 00:28:41,440
+<font color="#00ff00">I am gathering the greatest</font>
+<font color="#00ff00">from every world,</font>
+
+322
+00:28:41,440 --> 00:28:43,160
+<font color="#00ff00">from even the heavens above,</font>
+
+323
+00:28:43,160 --> 00:28:46,200
+<font color="#00ff00">but I want you</font>
+<font color="#00ff00">to help me wage my war.</font>
+
+324
+00:28:49,080 --> 00:28:51,400
+<font color="#ffffff">I should be flattered.</font>
+<font color="#00ff00">Well, I have come</font>
+
+325
+00:28:51,400 --> 00:28:54,040
+<font color="#00ff00">rather a long way,</font>
+<font color="#00ff00">so, yes, you should.</font>
+
+326
+00:28:57,320 --> 00:28:58,920
+<font color="#ffffff">Lord Asriel...</font>
+
+327
+00:29:00,280 --> 00:29:02,040
+<font color="#ffffff">..I cannot help you.</font>
+
+328
+00:29:04,880 --> 00:29:07,000
+<font color="#ffffff">Machi is my youngest daughter.</font>
+
+329
+00:29:10,040 --> 00:29:11,640
+<font color="#ffffff">But I have another.</font>
+
+330
+00:29:19,720 --> 00:29:23,280
+<font color="#ffffff">The Temple have been targeting</font>
+<font color="#ffffff">our children for a while now.</font>
+
+331
+00:29:27,480 --> 00:29:31,640
+<font color="#ffffff">But in recent years,</font>
+<font color="#ffffff">they began taking them away...</font>
+
+332
+00:29:34,160 --> 00:29:35,600
+<font color="#ffffff">..for training.</font>
+
+333
+00:29:40,000 --> 00:29:41,920
+<font color="#ffffff">Aria...</font>
+
+334
+00:29:41,920 --> 00:29:44,120
+<font color="#ffffff">..is the property of the Temple.</font>
+
+335
+00:29:45,680 --> 00:29:46,960
+<font color="#ffffff">To her...</font>
+
+336
+00:29:48,480 --> 00:29:49,960
+<font color="#ffffff">..I do not exist.</font>
+
+337
+00:29:51,280 --> 00:29:53,040
+<font color="#ffffff">There is only the Authority.</font>
+
+338
+00:29:54,280 --> 00:29:56,200
+<font color="#ffffff">And the girl I knew...</font>
+
+339
+00:29:58,000 --> 00:29:59,520
+<font color="#ffffff">..she's gone.</font>
+
+340
+00:30:02,800 --> 00:30:04,800
+<font color="#ffffff">But she's still my child.</font>
+
+341
+00:30:15,840 --> 00:30:17,800
+<font color="#ffffff">I understand what you offer,</font>
+
+342
+00:30:17,800 --> 00:30:20,480
+<font color="#ffffff">but I have my</font>
+<font color="#ffffff">own battles here to fight,</font>
+
+343
+00:30:20,480 --> 00:30:23,640
+<font color="#ffffff">and an obligation</font>
+<font color="#ffffff">to save as many sons...</font>
+
+344
+00:30:25,320 --> 00:30:27,120
+<font color="#ffffff">..and daughters as I can.</font>
+
+345
+00:30:27,120 --> 00:30:29,520
+<font color="#00ff00">May I?</font>
+
+346
+00:30:29,520 --> 00:30:31,000
+<font color="#00ff00">Please?</font>
+
+347
+00:30:49,160 --> 00:30:51,320
+<font color="#00ff00">I've seen this before.</font>
+
+348
+00:30:51,320 --> 00:30:54,920
+<font color="#00ff00">Her daemon has been severed.</font>
+<font color="#ffffff">She is not demonic!</font>
+
+349
+00:30:54,920 --> 00:30:56,640
+<font color="#00ff00">I did not say she was, forgive me.</font>
+
+350
+00:30:56,640 --> 00:30:58,720
+<font color="#00ff00">Please, if you'll</font>
+<font color="#00ff00">allow me to explain.</font>
+
+351
+00:30:58,720 --> 00:31:00,520
+<font color="#00ff00">Stelmaria?</font>
+
+352
+00:31:03,760 --> 00:31:07,360
+<font color="#00ff00">Stelmaria and I are one.</font>
+
+353
+00:31:07,360 --> 00:31:10,000
+<font color="#00ff00">She is my daemon.</font>
+
+354
+00:31:10,000 --> 00:31:12,320
+<font color="#00ff00">My soul, if you use that word.</font>
+
+355
+00:31:14,280 --> 00:31:16,960
+<font color="#00ff00">Aria's daemon resided within.</font>
+
+356
+00:31:18,040 --> 00:31:20,080
+<font color="#00ff00">The link that</font>
+<font color="#00ff00">binds us to our daemon</font>
+
+357
+00:31:20,080 --> 00:31:23,120
+<font color="#00ff00">is immensely powerful,</font>
+<font color="#00ff00">but when it is severed,</font>
+
+358
+00:31:23,120 --> 00:31:25,000
+<font color="#00ff00">well...</font>
+
+359
+00:31:25,000 --> 00:31:26,840
+<font color="#00ff00">..very little remains.</font>
+
+360
+00:31:27,880 --> 00:31:31,400
+<font color="#00ff00">They are taking our souls, Ogunwe,</font>
+
+361
+00:31:31,400 --> 00:31:34,320
+<font color="#00ff00">and with them our humanity,</font>
+
+362
+00:31:34,320 --> 00:31:37,040
+<font color="#00ff00">to make us easier to control.</font>
+
+363
+00:31:37,040 --> 00:31:39,000
+<font color="#00ff00">To make us this.</font>
+
+364
+00:31:39,000 --> 00:31:41,600
+<font color="#ffffff">DISTANT HUMMING</font>
+
+365
+00:31:41,600 --> 00:31:42,760
+<font color="#ffffff">Drones!</font>
+
+366
+00:31:45,640 --> 00:31:47,080
+<font color="#ffffff">Get Machi underground!</font>
+
+367
+00:31:47,080 --> 00:31:48,720
+<font color="#ffffff">Everyone inside now!</font>
+
+368
+00:31:53,840 --> 00:31:56,320
+<font color="#00ffff">Hold your fire.</font>
+<font color="#00ffff">They're trying to draw us out.</font>
+
+369
+00:31:57,800 --> 00:31:59,760
+<font color="#ffffff">CLICKING</font>
+
+370
+00:32:26,720 --> 00:32:29,240
+<font color="#ffff00">You sent for me, Father President.</font>
+
+371
+00:32:29,240 --> 00:32:31,200
+<font color="#ffffff">Come in, Father Gomez.</font>
+
+372
+00:32:37,240 --> 00:32:38,960
+<font color="#ffffff">I have come to Geneva</font>
+
+373
+00:32:38,960 --> 00:32:41,920
+<font color="#ffffff">on a matter of great significance.</font>
+
+374
+00:32:41,920 --> 00:32:47,040
+<font color="#ffffff">Fra Pavel's alethiometer</font>
+<font color="#ffffff">has informed me of a prophecy,</font>
+
+375
+00:32:47,040 --> 00:32:49,040
+<font color="#ffffff">which, if true,</font>
+
+376
+00:32:49,040 --> 00:32:51,360
+<font color="#ffffff">and I believe it is,</font>
+
+377
+00:32:51,360 --> 00:32:54,320
+<font color="#ffffff">risks plunging us into a darkness</font>
+
+378
+00:32:54,320 --> 00:32:58,080
+<font color="#ffffff">the like of which</font>
+<font color="#ffffff">the world has not experienced.</font>
+
+379
+00:32:59,160 --> 00:33:03,360
+<font color="#ffffff">There is a girl wandering the earth</font>
+<font color="#ffffff">at this very moment,</font>
+
+380
+00:33:03,360 --> 00:33:06,560
+<font color="#ffffff">and she is Eve,</font>
+
+381
+00:33:06,560 --> 00:33:08,520
+<font color="#ffffff">the mother of us all.</font>
+
+382
+00:33:08,520 --> 00:33:10,080
+<font color="#ffffff">And, of course, of all sin.</font>
+
+383
+00:33:10,080 --> 00:33:15,080
+<font color="#ffffff">The instrument says that if this</font>
+<font color="#ffffff">child is tempted by the serpent,</font>
+
+384
+00:33:15,080 --> 00:33:19,000
+<font color="#ffffff">she will likely fall. And if she</font>
+<font color="#ffffff">does fall, then sin...</font>
+
+385
+00:33:20,360 --> 00:33:23,680
+<font color="#ffffff">..and Dust will triumph.</font>
+
+386
+00:33:25,400 --> 00:33:27,400
+<font color="#ffffff">This cannot happen.</font>
+
+387
+00:33:27,400 --> 00:33:28,880
+<font color="#ffff00">So we stop her.</font>
+
+388
+00:33:31,720 --> 00:33:33,640
+<font color="#ffff00">Where is she?</font>
+
+389
+00:33:33,640 --> 00:33:37,680
+<font color="#ffffff">Unfortunately, we are at the mercy</font>
+<font color="#ffffff">of the instrument and its user.</font>
+
+390
+00:33:37,680 --> 00:33:41,400
+<font color="#ffffff">Fra Pavel's work is unbearably slow.</font>
+
+391
+00:33:44,960 --> 00:33:47,120
+<font color="#ffffff">When he does locate the child...</font>
+
+392
+00:33:49,800 --> 00:33:52,680
+<font color="#ffffff">..we will send</font>
+<font color="#ffffff">troops to retrieve her.</font>
+
+393
+00:33:55,760 --> 00:34:00,920
+<font color="#ffffff">And I would like you,</font>
+<font color="#ffffff">Father Gomez, to lead them.</font>
+
+394
+00:34:02,880 --> 00:34:04,200
+<font color="#ffff00">It would be an honour.</font>
+
+395
+00:34:06,080 --> 00:34:09,160
+<font color="#ffff00">I could perhaps</font>
+<font color="#ffff00">drop in on Fra Pavel,</font>
+
+396
+00:34:09,160 --> 00:34:12,120
+<font color="#ffff00">see if I can speed him up a little.</font>
+<font color="#ffffff">Please.</font>
+
+397
+00:34:28,800 --> 00:34:30,720
+<font color="#ffffff">BREATHES SHAKILY</font>
+
+398
+00:34:35,360 --> 00:34:37,080
+<font color="#ffffff">FIRE CRACKLES</font>
+
+399
+00:34:39,240 --> 00:34:41,000
+<font color="#ffff00">All these men after you.</font>
+
+400
+00:34:43,560 --> 00:34:46,240
+<font color="#ffff00">I tell you, it'll never change.</font>
+
+401
+00:34:46,240 --> 00:34:50,280
+<font color="#ffff00">There are forces out there that you</font>
+<font color="#ffff00">can't begin to understand.</font>
+
+402
+00:34:52,760 --> 00:34:54,920
+<font color="#ffff00">I wish you wouldn't</font>
+<font color="#ffff00">look at me like that.</font>
+
+403
+00:34:57,680 --> 00:34:59,880
+<font color="#ffff00">Would you rather</font>
+<font color="#ffff00">I didn't keep her safe?</font>
+
+404
+00:34:59,880 --> 00:35:02,200
+<font color="#00ffff">You're keeping her prisoner.</font>
+
+405
+00:35:03,400 --> 00:35:04,840
+<font color="#00ffff">Let us go.</font>
+
+406
+00:35:05,840 --> 00:35:07,440
+<font color="#ffff00">'Fraid I can't.</font>
+
+407
+00:35:19,720 --> 00:35:20,920
+<font color="#ffffff">GROWLS</font>
+
+408
+00:36:11,040 --> 00:36:14,000
+<font color="#ffffff">RUSTLING</font>
+
+409
+00:36:23,920 --> 00:36:25,680
+<font color="#ffff00">You've found her?</font>
+
+410
+00:36:27,440 --> 00:36:28,600
+<font color="#00ff00">You were right.</font>
+
+411
+00:36:29,720 --> 00:36:32,160
+<font color="#00ff00">She is in the</font>
+<font color="#00ff00">world of the daemons.</font>
+
+412
+00:36:32,160 --> 00:36:33,480
+<font color="#ffff00">Where?</font>
+
+413
+00:36:33,480 --> 00:36:36,040
+<font color="#00ff00">She's with a woman who is</font>
+<font color="#00ff00">holding her against her will</font>
+
+414
+00:36:36,040 --> 00:36:38,120
+<font color="#00ff00">in a house carved into the rocks.</font>
+
+415
+00:36:38,120 --> 00:36:40,880
+<font color="#00ff00">It's on a remote</font>
+<font color="#00ff00">island in the German Ocean.</font>
+
+416
+00:36:42,640 --> 00:36:44,240
+<font color="#00ff00">You'll need passage on a ship.</font>
+
+417
+00:36:44,240 --> 00:36:46,040
+<font color="#ffff00">But Lyra's not harmed?</font>
+
+418
+00:36:46,040 --> 00:36:48,800
+<font color="#00ff00">No, just asleep, and dreaming.</font>
+
+419
+00:36:48,800 --> 00:36:50,720
+<font color="#ffff00">What can you</font>
+<font color="#ffff00">tell me about the woman?</font>
+
+420
+00:36:50,720 --> 00:36:53,320
+<font color="#00ff00">Her daemon is a golden monkey.</font>
+
+421
+00:36:53,320 --> 00:36:54,680
+<font color="#ffff00">Her mother.</font>
+
+422
+00:36:54,680 --> 00:36:57,520
+<font color="#00ffff">Her mother?</font><font color="#ffff00"> Lyra's mother</font>
+<font color="#ffff00">is the worst possible person</font>
+
+423
+00:36:57,520 --> 00:37:00,520
+<font color="#ffff00">she could be with.</font>
+<font color="#00ff00">Balthamos will take you to her.</font>
+
+424
+00:37:02,320 --> 00:37:05,560
+<font color="#00ff00">I must go to Asriel and</font>
+<font color="#00ff00">tell him about you and Aesahaettr.</font>
+
+425
+00:37:05,560 --> 00:37:07,720
+<font color="#00ffff">Are you sure this is safe?</font>
+
+426
+00:37:16,000 --> 00:37:19,880
+<font color="#00ff00">Go straight to Lyra, and we will be</font>
+<font color="#00ff00">together again before long.</font>
+
+427
+00:37:19,880 --> 00:37:23,600
+<font color="#00ffff">I do not remember</font>
+<font color="#00ffff">agreeing to accompany the boy.</font>
+
+428
+00:37:25,880 --> 00:37:27,800
+<font color="#00ff00">Stay close to him.</font>
+
+429
+00:37:40,800 --> 00:37:42,720
+<font color="#00ff00">As soon as the</font>
+<font color="#00ff00">children are reunited,</font>
+
+430
+00:37:42,720 --> 00:37:45,040
+<font color="#00ff00">you will both come</font>
+<font color="#00ff00">to me in Asriel's republic?</font>
+
+431
+00:37:45,040 --> 00:37:47,000
+<font color="#ffffff">MOUTHS</font>
+
+432
+00:38:10,960 --> 00:38:13,000
+<font color="#ffffff">WIND GUSTS</font>
+
+433
+00:38:20,880 --> 00:38:23,800
+<font color="#ffff00">Father President MacPhail sent me.</font>
+
+434
+00:38:23,800 --> 00:38:25,640
+<font color="#ffff00">Where is the girl?</font>
+
+435
+00:38:25,640 --> 00:38:29,200
+<font color="#00ffff">I am close, Father, I assure you.</font>
+
+436
+00:38:33,720 --> 00:38:35,560
+<font color="#ffffff">SQUEAKS</font>
+
+437
+00:38:38,200 --> 00:38:40,600
+<font color="#ffff00">I see this task</font>
+<font color="#ffff00">has weighed heavily on you.</font>
+
+438
+00:38:41,840 --> 00:38:43,120
+<font color="#ffff00">The pressure.</font>
+
+439
+00:38:44,280 --> 00:38:46,120
+<font color="#ffff00">Such great responsibility.</font>
+
+440
+00:38:46,120 --> 00:38:48,760
+<font color="#ffff00">It must muddle the mind terribly.</font>
+
+441
+00:38:50,000 --> 00:38:55,280
+<font color="#00ffff">It is this final part</font>
+<font color="#00ffff">of the reading, its meaning...</font>
+
+442
+00:38:55,280 --> 00:38:56,840
+<font color="#ffffff">SQUEAKS SOFTLY</font>
+
+443
+00:38:56,840 --> 00:38:58,400
+<font color="#ffffff">FRA PAVEL SIGHS</font>
+
+444
+00:39:00,160 --> 00:39:01,520
+<font color="#00ffff">..eludes me.</font>
+
+445
+00:39:02,840 --> 00:39:04,800
+<font color="#ffffff">SQUEAKING</font>
+
+446
+00:39:08,680 --> 00:39:10,880
+<font color="#00ffff">I just need a little more time.</font>
+
+447
+00:39:12,600 --> 00:39:14,680
+<font color="#ffff00">We can only do that of which</font>
+<font color="#ffff00">we are capable.</font>
+
+448
+00:39:15,720 --> 00:39:17,280
+<font color="#ffff00">Father President has advised</font>
+
+449
+00:39:17,280 --> 00:39:19,720
+<font color="#ffff00">that if the coordinates</font>
+<font color="#ffff00">are not forthcoming,</font>
+
+450
+00:39:19,720 --> 00:39:21,440
+<font color="#ffff00">then perhaps the time has come to...</font>
+
+451
+00:39:22,480 --> 00:39:24,760
+<font color="#ffff00">..re-educate you.</font><font color="#00ffff"> No.</font>
+
+452
+00:39:25,880 --> 00:39:27,680
+<font color="#00ffff">No.</font>
+
+453
+00:39:27,680 --> 00:39:29,080
+<font color="#00ffff">I will find her.</font>
+
+454
+00:39:30,920 --> 00:39:32,400
+<font color="#00ffff">I promise.</font>
+
+455
+00:39:32,400 --> 00:39:34,600
+<font color="#ffff00">I have no doubt that you will.</font>
+
+456
+00:39:49,200 --> 00:39:52,720
+<font color="#ffffff">WHISPERS:</font><font color="#00ffff"> Lyra, wake up, please.</font>
+
+457
+00:39:56,040 --> 00:39:57,600
+<font color="#00ffff">Look.</font>
+
+458
+00:40:04,920 --> 00:40:06,400
+<font color="#00ffff">We can get away.</font>
+
+459
+00:40:36,000 --> 00:40:37,680
+<font color="#ffffff">GASPS</font>
+
+460
+00:40:50,840 --> 00:40:52,400
+<font color="#ffffff">PURRS SOFTLY</font>
+
+461
+00:40:57,480 --> 00:40:58,680
+<font color="#ffffff">GASPS</font>
+
+462
+00:41:00,960 --> 00:41:03,840
+<font color="#ffffff">PANTS</font>
+
+463
+00:41:03,840 --> 00:41:05,480
+<font color="#ffffff">GOLDEN MONKEY SCREECHES</font>
+
+464
+00:41:08,360 --> 00:41:09,600
+<font color="#ffff00">Lyra?</font>
+
+465
+00:41:09,600 --> 00:41:11,320
+<font color="#00ffff">She's coming.</font>
+
+466
+00:41:13,560 --> 00:41:15,240
+<font color="#00ffff">You're not going to make it.</font>
+
+467
+00:41:15,240 --> 00:41:16,720
+<font color="#ffffff">We have to try.</font>
+
+468
+00:41:22,840 --> 00:41:26,240
+<font color="#00ffff">Hide here.</font>
+<font color="#00ffff">Maybe someone will see us.</font>
+
+469
+00:41:42,080 --> 00:41:45,840
+<font color="#ffffff">PANTS</font>
+
+470
+00:41:45,840 --> 00:41:47,240
+<font color="#ffff00">Lyra?</font>
+
+471
+00:41:51,160 --> 00:41:52,720
+<font color="#ffff00">Lyra!</font>
+
+472
+00:41:52,720 --> 00:41:54,520
+<font color="#ffffff">Where is she?</font>
+
+473
+00:41:54,520 --> 00:41:56,280
+<font color="#00ffff">I can't see.</font>
+
+474
+00:41:56,280 --> 00:41:58,200
+<font color="#ffff00">Lyra?</font>
+
+475
+00:41:58,200 --> 00:42:00,480
+<font color="#ffffff">LAUGHING</font>
+
+476
+00:41:58,200 --> 00:42:00,480
+<font color="#ffff00">Lyra, where are you?</font>
+
+477
+00:42:00,480 --> 00:42:02,800
+<font color="#ffff00">You never cease to amaze me.</font>
+
+478
+00:42:15,520 --> 00:42:18,000
+<font color="#ffffff">WHISPERS: Please...</font>
+
+479
+00:42:24,320 --> 00:42:26,080
+<font color="#ffff00">Mm.</font>
+
+480
+00:42:47,160 --> 00:42:48,720
+<font color="#ffff00">Hmm.</font>
+
+481
+00:42:52,720 --> 00:42:54,920
+<font color="#ffff00">I do understand</font>
+<font color="#ffff00">why you're doing this.</font>
+
+482
+00:42:56,760 --> 00:43:00,080
+<font color="#ffff00">It must be strange,</font>
+<font color="#ffff00">being here like this...</font>
+
+483
+00:43:01,160 --> 00:43:02,240
+<font color="#ffff00">..with me.</font>
+
+484
+00:43:05,040 --> 00:43:07,200
+<font color="#ffff00">I haven't brought you</font>
+<font color="#ffff00">here to keep you jailed.</font>
+
+485
+00:43:08,720 --> 00:43:10,760
+<font color="#ffff00">I've done it to keep you safe.</font>
+
+486
+00:43:12,480 --> 00:43:13,840
+<font color="#ffff00">Lyra, darling...</font>
+
+487
+00:43:15,640 --> 00:43:18,280
+<font color="#ffff00">..there are people coming for you.</font>
+
+488
+00:43:19,760 --> 00:43:21,160
+<font color="#ffff00">Dangerous people.</font>
+
+489
+00:43:26,080 --> 00:43:27,440
+<font color="#ffff00">You're so brave.</font>
+
+490
+00:43:28,920 --> 00:43:30,600
+<font color="#ffff00">So courageous.</font>
+
+491
+00:43:42,680 --> 00:43:45,320
+<font color="#ffff00">I know you won't believe me,</font>
+<font color="#ffff00">but I...</font>
+
+492
+00:43:46,440 --> 00:43:47,760
+<font color="#ffff00">..I am doing this for you.</font>
+
+493
+00:43:49,000 --> 00:43:50,960
+<font color="#ffff00">Come on, darling, let me help.</font>
+
+494
+00:43:52,960 --> 00:43:55,240
+<font color="#ffffff">I will never be safe with you.</font>
+
+495
+00:43:58,800 --> 00:44:00,920
+<font color="#ffffff">WHIMPERS</font>
+
+496
+00:44:02,320 --> 00:44:03,800
+<font color="#ffff00">I'm sorry.</font>
+
+497
+00:44:09,040 --> 00:44:11,040
+<font color="#ffff00">I'm sorry.</font>
+
+498
+00:44:14,480 --> 00:44:16,800
+<font color="#00ffff">Commander,</font>
+<font color="#00ffff">they're heading for the mines.</font>
+
+499
+00:44:16,800 --> 00:44:19,680
+<font color="#00ffff">They will miss us by four miles.</font>
+<font color="#ffffff">Good.</font>
+
+500
+00:44:19,680 --> 00:44:21,920
+<font color="#ffffff">We'll stay covered until sundown.</font>
+
+501
+00:44:27,680 --> 00:44:29,840
+<font color="#00ff00">Putting up a good fight, Commander,</font>
+
+502
+00:44:29,840 --> 00:44:33,080
+<font color="#00ff00">but the battle</font>
+<font color="#00ff00">you're engaged in is too small.</font>
+
+503
+00:44:35,240 --> 00:44:38,160
+<font color="#00ff00">Even if you win this</font>
+<font color="#00ff00">fight against the Temple,</font>
+
+504
+00:44:38,160 --> 00:44:40,960
+<font color="#00ff00">the Authority will send</font>
+<font color="#00ff00">more servants in their place</font>
+
+505
+00:44:40,960 --> 00:44:42,760
+<font color="#00ff00">to put you back on your knees.</font>
+
+506
+00:44:42,760 --> 00:44:46,000
+<font color="#00ff00">They are in every world.</font>
+<font color="#00ff00">I've seen it.</font>
+
+507
+00:44:46,000 --> 00:44:49,400
+<font color="#ffffff">You keep talking of other worlds</font>
+<font color="#ffffff">as if you expect me to believe them.</font>
+
+508
+00:44:49,400 --> 00:44:50,880
+<font color="#00ff00">I do not lie.</font>
+
+509
+00:44:50,880 --> 00:44:53,400
+<font color="#00ff00">This is but one world among many.</font>
+
+510
+00:44:53,400 --> 00:44:55,600
+<font color="#00ff00">In every single one of them,</font>
+<font color="#00ff00">the same thing.</font>
+
+511
+00:44:55,600 --> 00:44:58,920
+<font color="#00ff00">Children - mutilated.</font>
+<font color="#00ff00">Science, learning - criminalised.</font>
+
+512
+00:44:58,920 --> 00:45:01,840
+<font color="#00ff00">And whole civilisations</font>
+<font color="#00ff00">cowering under the sky.</font>
+
+513
+00:45:03,800 --> 00:45:05,960
+<font color="#00ff00">I was like you once.</font>
+
+514
+00:45:05,960 --> 00:45:08,760
+<font color="#00ff00">In my world, the Temple, they are</font>
+<font color="#00ff00">called the Magisterium,</font>
+
+515
+00:45:08,760 --> 00:45:11,240
+<font color="#00ff00">and I have wasted</font>
+<font color="#00ff00">most of my life fighting them,</font>
+
+516
+00:45:11,240 --> 00:45:13,240
+<font color="#00ff00">until I discovered</font>
+
+517
+00:45:13,240 --> 00:45:16,840
+<font color="#00ff00">that they were but one</font>
+<font color="#00ff00">arm of the Authority's might,</font>
+
+518
+00:45:16,840 --> 00:45:19,920
+<font color="#00ff00">and that beast has countless arms.</font>
+
+519
+00:45:19,920 --> 00:45:23,280
+<font color="#00ff00">The only fight worth risking</font>
+<font color="#00ff00">your children's lives for</font>
+
+520
+00:45:23,280 --> 00:45:24,720
+<font color="#00ff00">lies elsewhere.</font>
+
+521
+00:45:26,440 --> 00:45:29,400
+<font color="#00ff00">My republic</font>
+<font color="#00ff00">down here in the good earth</font>
+
+522
+00:45:29,400 --> 00:45:31,480
+<font color="#00ff00">against his kingdom</font>
+<font color="#00ff00">up there in the sky.</font>
+
+523
+00:45:31,480 --> 00:45:34,760
+<font color="#00ff00">It is the only way to win.</font>
+
+524
+00:45:34,760 --> 00:45:37,360
+<font color="#00ff00">We cut off the head of the beast</font>
+<font color="#00ff00">and the rest will crumble.</font>
+
+525
+00:45:37,360 --> 00:45:39,040
+<font color="#ffffff">No!</font>
+
+526
+00:45:39,040 --> 00:45:40,360
+<font color="#ffffff">No.</font>
+
+527
+00:45:40,360 --> 00:45:43,360
+<font color="#ffffff">What you ask me</font>
+<font color="#ffffff">to believe is too great.</font>
+
+528
+00:45:43,360 --> 00:45:45,240
+<font color="#00ff00">It's a lot to take in.</font>
+
+529
+00:45:46,920 --> 00:45:48,440
+<font color="#00ff00">So let me show you.</font>
+
+530
+00:45:50,640 --> 00:45:53,800
+<font color="#ffffff">Show me?</font><font color="#00ff00"> That way you can decide</font>
+<font color="#00ff00">for yourself.</font>
+
+531
+00:45:55,880 --> 00:45:58,840
+<font color="#00ff00">Let me take you to another world.</font>
+
+532
+00:46:26,280 --> 00:46:28,680
+<font color="#ffffff">SOFT GRUNTING</font>
+
+533
+00:46:31,320 --> 00:46:32,880
+<font color="#ffff00">Please.</font>
+
+534
+00:46:34,720 --> 00:46:36,760
+<font color="#ffff00">Just let me be.</font>
+
+535
+00:46:51,840 --> 00:46:53,640
+<font color="#ffff00">I'll think of something.</font>
+
+536
+00:47:00,120 --> 00:47:02,920
+<font color="#ffff00">I just thought</font>
+<font color="#ffff00">he'd be here by now.</font>
+
+537
+00:47:11,200 --> 00:47:13,200
+<font color="#00ffff">Do you know how she reads it?</font>
+
+538
+00:47:13,200 --> 00:47:14,800
+<font color="#ffff00">No.</font>
+
+539
+00:47:14,800 --> 00:47:17,840
+<font color="#00ffff">Readers of those instruments</font>
+<font color="#00ffff">have normally studied many years.</font>
+
+540
+00:47:17,840 --> 00:47:19,880
+<font color="#00ffff">Even then,</font>
+<font color="#00ffff">they can only understand</font>
+
+541
+00:47:19,880 --> 00:47:22,520
+<font color="#00ffff">with the help of books.</font>
+<font color="#ffff00">She wasn't making it up.</font>
+
+542
+00:47:22,520 --> 00:47:25,400
+<font color="#00ffff">Perhaps</font>
+<font color="#00ffff">she's a very skilled inventor.</font>
+
+543
+00:47:25,400 --> 00:47:27,000
+<font color="#ffff00">She can read it.</font>
+
+544
+00:47:27,000 --> 00:47:29,560
+<font color="#ffff00">It told her things</font>
+<font color="#ffff00">she could have never known,</font>
+
+545
+00:47:29,560 --> 00:47:31,000
+<font color="#ffff00">like where my father was.</font>
+
+546
+00:47:31,000 --> 00:47:34,440
+<font color="#ffff00">It's part of her,</font>
+<font color="#ffff00">just like the knife's part of me.</font>
+
+547
+00:47:39,920 --> 00:47:41,280
+<font color="#ffffff">SIGHS</font>
+
+548
+00:47:42,560 --> 00:47:44,520
+<font color="#ffff00">That's the port we're looking for.</font>
+
+549
+00:47:45,640 --> 00:47:47,520
+<font color="#ffff00">Now we just need a ship.</font>
+
+550
+00:47:51,680 --> 00:47:53,120
+<font color="#ffffff">COMMOTION</font>
+
+551
+00:47:53,120 --> 00:47:56,920
+<font color="#ffffff">I am King Iorek Byrnison!</font>
+
+552
+00:47:56,920 --> 00:47:59,120
+<font color="#ffffff">GROWLING, SHOUTING</font>
+
+553
+00:48:00,800 --> 00:48:03,280
+<font color="#ffffff">GROWLS</font>
+
+554
+00:48:00,800 --> 00:48:03,280
+<font color="#ffffff">You trapped one of my bears!</font>
+
+555
+00:48:04,680 --> 00:48:07,080
+<font color="#ffffff">Release her now!</font>
+
+556
+00:48:07,080 --> 00:48:08,160
+<font color="#ffffff">GROWLING</font>
+
+557
+00:48:08,160 --> 00:48:10,080
+<font color="#ffff00">I think I know that bear.</font>
+
+558
+00:48:10,080 --> 00:48:12,320
+<font color="#ffff00">I can talk to him.</font><font color="#00ffff"> What?</font>
+
+559
+00:48:12,320 --> 00:48:14,640
+<font color="#ffffff">FIERCE GROWLING</font>
+
+560
+00:48:14,640 --> 00:48:16,520
+<font color="#ffff00">It's Lyra's friend.</font>
+
+561
+00:48:16,520 --> 00:48:18,480
+<font color="#ffffff">ROARS</font>
+
+562
+00:48:21,400 --> 00:48:23,680
+<font color="#ffffff">Where is she?!</font>
+
+563
+00:48:27,080 --> 00:48:28,280
+<font color="#ffffff">SCREAMS</font>
+
+564
+00:48:32,880 --> 00:48:34,040
+<font color="#00ff00">Stop!</font>
+
+565
+00:48:34,960 --> 00:48:36,520
+<font color="#00ff00">Come on!</font>
+
+566
+00:48:39,640 --> 00:48:42,680
+<font color="#ffffff">ROARS</font>
+
+567
+00:48:42,680 --> 00:48:44,480
+<font color="#ffff00">Stop!</font>
+
+568
+00:48:44,480 --> 00:48:45,880
+<font color="#ffff00">Stop.</font>
+
+569
+00:48:47,400 --> 00:48:50,000
+<font color="#ffffff">Get out of my way, child.</font>
+<font color="#ffff00">You have to stop.</font>
+
+570
+00:48:50,000 --> 00:48:52,240
+<font color="#ffff00">There are innocent people here.</font>
+
+571
+00:48:52,240 --> 00:48:55,760
+<font color="#ffffff">They have taken one of my bears!</font>
+
+572
+00:48:55,760 --> 00:48:57,520
+<font color="#ffffff">What do you want?</font>
+
+573
+00:48:58,520 --> 00:49:00,440
+<font color="#ffff00">I want to fight you.</font>
+
+574
+00:49:00,440 --> 00:49:01,760
+<font color="#ffff00">In single combat.</font>
+
+575
+00:49:03,440 --> 00:49:06,120
+<font color="#ffff00">If I win,</font>
+<font color="#ffff00">you leave these people alone.</font>
+
+576
+00:49:06,120 --> 00:49:10,600
+<font color="#ffff00">If I lose, do whatever</font>
+<font color="#ffff00">you want with them and me.</font>
+
+577
+00:49:10,600 --> 00:49:12,600
+<font color="#ffffff">You wish to fight me?</font>
+
+578
+00:49:14,080 --> 00:49:17,400
+<font color="#ffffff">It would be shameful to fight you.</font>
+
+579
+00:49:17,400 --> 00:49:21,920
+<font color="#ffffff">You are as weak</font>
+<font color="#ffffff">as an oyster out of its shell.</font>
+
+580
+00:49:21,920 --> 00:49:24,400
+<font color="#ffff00">Let's make it a fair fight, then.</font>
+
+581
+00:49:24,400 --> 00:49:27,320
+<font color="#ffff00">You have all that armour.</font>
+<font color="#ffff00">I have none.</font>
+
+582
+00:49:28,720 --> 00:49:31,400
+<font color="#ffff00">Give me a piece. Anything you want.</font>
+
+583
+00:49:32,480 --> 00:49:34,480
+<font color="#ffff00">We'll be better matched then,</font>
+<font color="#ffff00">won't we?</font>
+
+584
+00:49:40,520 --> 00:49:43,680
+<font color="#ffffff">Do you know</font>
+<font color="#ffffff">what you are doing, boy?</font>
+
+585
+00:49:49,680 --> 00:49:52,080
+<font color="#ffff00">Sky iron, am I right?</font>
+
+586
+00:49:53,520 --> 00:49:55,880
+<font color="#ffff00">Impenetrable, I heard.</font>
+
+587
+00:50:07,760 --> 00:50:09,520
+<font color="#ffff00">That's surprising.</font>
+
+588
+00:50:09,520 --> 00:50:12,360
+<font color="#ffff00">I guess I'll have to fight you</font>
+<font color="#ffff00">without armour, after all.</font>
+
+589
+00:50:14,920 --> 00:50:17,600
+<font color="#ffffff">I cannot fight that.</font>
+
+590
+00:50:17,600 --> 00:50:19,800
+<font color="#ffffff">That knife is too strange.</font>
+
+591
+00:50:22,360 --> 00:50:24,440
+<font color="#ffffff">You win, boy.</font>
+
+592
+00:50:25,480 --> 00:50:27,320
+<font color="#ffff00">Free that bear now.</font>
+
+593
+00:50:27,320 --> 00:50:29,840
+<font color="#00ff00">You heard the boy! Do it!</font>
+
+594
+00:50:32,040 --> 00:50:33,880
+<font color="#ffffff">TOWNSPEOPLE:</font><font color="#00ffff"> Do it!</font>
+
+595
+00:50:44,520 --> 00:50:47,280
+<font color="#ffffff">What is your name, child?</font>
+
+596
+00:50:48,320 --> 00:50:50,640
+<font color="#ffff00">Will Parry.</font>
+
+597
+00:50:50,640 --> 00:50:52,480
+<font color="#ffffff">So, Will Parry,</font>
+
+598
+00:50:52,480 --> 00:50:54,280
+<font color="#ffffff">you're looking for Lyra?</font>
+
+599
+00:50:54,280 --> 00:50:58,000
+<font color="#ffff00">She's with her mother,</font>
+<font color="#ffff00">being held against her will.</font>
+
+600
+00:50:58,000 --> 00:50:59,760
+<font color="#ffffff">Then we must go to her.</font>
+
+601
+00:51:07,360 --> 00:51:08,840
+<font color="#ffff00">Father President.</font>
+
+602
+00:51:11,240 --> 00:51:13,280
+<font color="#ffff00">I visited Fra Pavel.</font>
+
+603
+00:51:13,280 --> 00:51:15,040
+<font color="#ffff00">Several times.</font><font color="#ffffff"> Ah.</font>
+
+604
+00:51:25,840 --> 00:51:27,400
+<font color="#ffff00">I helped him to...</font>
+
+605
+00:51:29,080 --> 00:51:32,320
+<font color="#ffff00">..focus his mind...a little.</font>
+
+606
+00:51:34,800 --> 00:51:37,920
+<font color="#ffff00">He has since divined that</font>
+<font color="#ffff00">the child is with her mother.</font>
+
+607
+00:51:40,120 --> 00:51:41,840
+<font color="#ffffff">The mother.</font>
+
+608
+00:51:43,000 --> 00:51:44,280
+<font color="#ffff00">With this information,</font>
+
+609
+00:51:44,280 --> 00:51:46,680
+<font color="#ffff00">I am confident</font>
+<font color="#ffff00">I can locate the girl myself.</font>
+
+610
+00:51:48,000 --> 00:51:50,480
+<font color="#ffff00">And I will need to</font>
+<font color="#ffff00">use methods that aren't...</font>
+
+611
+00:51:50,480 --> 00:51:52,120
+<font color="#ffff00">..officially sanctioned.</font>
+
+612
+00:51:52,120 --> 00:51:54,440
+<font color="#ffffff">You must do</font>
+<font color="#ffffff">whatever you need to do.</font>
+
+613
+00:51:54,440 --> 00:51:58,200
+<font color="#ffffff">The second you have</font>
+<font color="#ffffff">their position, go to them,</font>
+
+614
+00:51:58,200 --> 00:52:01,080
+<font color="#ffffff">get the child, get the mother</font>
+<font color="#ffffff">and bring them directly to me.</font>
+
+615
+00:52:01,080 --> 00:52:04,680
+<font color="#ffffff">Marisa Coulter is evil.</font>
+<font color="#ffffff">She is persuasive.</font>
+
+616
+00:52:04,680 --> 00:52:07,120
+<font color="#ffffff">Do not trust her.</font>
+
+617
+00:52:07,120 --> 00:52:08,360
+<font color="#ffff00">Father,</font>
+
+618
+00:52:08,360 --> 00:52:11,120
+<font color="#ffff00">I've done pre-emptive penance</font>
+<font color="#ffff00">every day of my adult life.</font>
+
+619
+00:52:11,120 --> 00:52:14,960
+<font color="#ffff00">I will do...whatever...</font>
+
+620
+00:52:14,960 --> 00:52:16,840
+<font color="#ffff00">..is required to get them here.</font>
+
+621
+00:52:18,680 --> 00:52:22,240
+<font color="#ffffff">Your dedication to the</font>
+<font color="#ffffff">Authority will not go unappreciated.</font>
+
+622
+00:53:26,400 --> 00:53:29,080
+<font color="#ffffff">CHITTERING</font>
+
+623
+00:54:20,680 --> 00:54:22,400
+<font color="#ffffff">Asriel.</font>
+
+624
+00:54:22,400 --> 00:54:25,360
+<font color="#ffffff">I do hope you're</font>
+<font color="#ffffff">not walking me to my death.</font>
+
+625
+00:54:25,360 --> 00:54:27,040
+<font color="#00ff00">Death is a lie.</font>
+
+626
+00:54:30,200 --> 00:54:31,840
+<font color="#ffffff">You're wrong.</font>
+
+627
+00:54:31,840 --> 00:54:33,360
+<font color="#ffffff">Death is real.</font>
+
+628
+00:54:33,360 --> 00:54:35,240
+<font color="#ffffff">I've seen it.</font>
+
+629
+00:54:35,240 --> 00:54:37,600
+<font color="#ffffff">More than my fair share at battle.</font>
+
+630
+00:54:37,600 --> 00:54:41,400
+<font color="#00ff00">Commander, somehow the</font>
+<font color="#00ff00">Authority has managed to pervert</font>
+
+631
+00:54:41,400 --> 00:54:44,480
+<font color="#00ff00">the natural order of Dust.</font>
+<font color="#00ff00">I don't know how,</font>
+
+632
+00:54:44,480 --> 00:54:48,560
+<font color="#00ff00">but when I find out, believe me,</font>
+<font color="#00ff00">death is going to die.</font>
+
+633
+00:54:49,600 --> 00:54:51,520
+<font color="#ffffff">I believe I've heard enough.</font>
+
+634
+00:54:53,320 --> 00:54:54,600
+<font color="#00ff00">You'll see.</font>
+
+635
+00:54:56,120 --> 00:54:59,800
+<font color="#00ff00">Stelmaria, on my mark,</font>
+<font color="#00ff00">I want you to bite down.</font>
+
+636
+00:54:59,800 --> 00:55:01,240
+<font color="#00ff00">You ready?</font>
+
+637
+00:55:02,440 --> 00:55:06,560
+<font color="#00ff00">In three, two, one.</font>
+
+638
+00:55:06,560 --> 00:55:08,800
+<font color="#ffffff">PIERCING BOOM</font>
+
+639
+00:55:10,800 --> 00:55:13,000
+<font color="#ffffff">LAUGHS</font>
+
+640
+00:55:13,000 --> 00:55:15,760
+<font color="#ffffff">LAUGHS HEARTILY</font>
+
+641
+00:55:15,760 --> 00:55:17,240
+<font color="#00ff00">See?</font>
+
+642
+00:55:23,280 --> 00:55:25,560
+<font color="#00ff00">Welcome to the</font>
+<font color="#00ff00">Republic of Heaven, Commander.</font>
+
+643
+00:55:27,200 --> 00:55:29,640
+<font color="#00ff00">I'd gather my people if I were you.</font>
+
+644
+00:55:29,640 --> 00:55:33,360
+<font color="#00ff00">The real war is</font>
+<font color="#00ff00">coming and we must win it.</font>
+
