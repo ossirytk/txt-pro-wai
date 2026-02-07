@@ -1,0 +1,8 @@
+1
+00:00:03,800 --> 00:00:05,760
+<font color="#ffffff">The prophecy is clear.</font>
+
+2
+00:00:06,760 --> 00:00:09,920
+<font color="#ffffff">She is the child that shall</font>
+<font color="#ffffff">bring about the end of destiny.</font>
