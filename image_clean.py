@@ -6,17 +6,34 @@ import click
 import cv2
 import numpy as np
 
+ANGLE_NONE = 0
+ANGLE_90 = 90
+ANGLE_180 = 180
+ANGLE_270 = 270
+CONTOUR_POINT_COUNT = 4
+DESKEW_ANGLE_NEGATIVE_LIMIT = -45
+DESKEW_ANGLE_LIMIT = 45
+EMPTY_SIZE = 0
+FULL_ROTATION_DEGREES = 360
+MIDPOINT_INTENSITY = 127
+MIN_DESKEW_DIMENSION = 50
+ZERO = 0
+THRESHOLD_NONE = 0
+THIN_RUN_MIN = 1
+THIN_RUN_MAX = 3
+
 
 # Simple debug logger for per-step image info
 def _log_step(debug_log: str, name: str, img: np.ndarray) -> None:
     if not debug_log:
         return
     try:
-        with open(debug_log, "a") as f:
-            f.write(f"{name}: {img.shape}\n")
-    except Exception:
+        with Path(debug_log).open("a", encoding="utf-8") as debug_file:
+            debug_file.write(f"{name}: {img.shape}\n")
+    except OSError:
         # Never fail processing due to logging
-        pass
+        return
+
 
 # pip install click opencv-python numpy
 
@@ -32,7 +49,7 @@ def unsharp_mask(
 ) -> np.ndarray:
     blurred = cv2.GaussianBlur(gray, (0, 0), radius)
     sharpened = cv2.addWeighted(gray, 1 + amount, blurred, -amount, 0)
-    if threshold > 0:
+    if threshold > THRESHOLD_NONE:
         low_contrast = np.abs(gray - blurred) < threshold
         sharpened[low_contrast] = gray[low_contrast]
     return sharpened
@@ -72,15 +89,15 @@ def equalize_lighting(gray: np.ndarray) -> np.ndarray:
 # ----------------------------
 def rotate_image(bgr: np.ndarray, angle: int) -> np.ndarray:
     """Rotate image by 90, 180, or 270 degrees. 0 = no rotation."""
-    if angle == 0 or angle % 360 == 0:
+    if angle == ANGLE_NONE or angle % FULL_ROTATION_DEGREES == ANGLE_NONE:
         return bgr
 
     # OpenCV rotateCode: 0=90°CW, 1=180°, 2=90°CCW
-    if angle == 90:
+    if angle == ANGLE_90:
         return cv2.rotate(bgr, cv2.ROTATE_90_CLOCKWISE)
-    if angle == 180:
+    if angle == ANGLE_180:
         return cv2.rotate(bgr, cv2.ROTATE_180)
-    if angle == 270:
+    if angle == ANGLE_270:
         return cv2.rotate(bgr, cv2.ROTATE_90_COUNTERCLOCKWISE)
     return bgr
 
@@ -139,7 +156,7 @@ def correct_perspective(bgr: np.ndarray) -> np.ndarray:
             continue
         peri = cv2.arcLength(c, closed=True)
         approx = cv2.approxPolyDP(c, 0.02 * peri, closed=True)
-        if len(approx) == 4:  # noqa: PLR2004
+        if len(approx) == CONTOUR_POINT_COUNT:
             return four_point_warp(img, approx.reshape(4, 2))
 
     return bgr
@@ -153,15 +170,15 @@ def deskew(gray: np.ndarray) -> np.ndarray:
     _, bw = cv2.threshold(blur, 0, 255, cv2.THRESH_BINARY + cv2.THRESH_OTSU)
     bw = 255 - bw  # text -> white
 
-    coords = np.column_stack(np.where(bw > 0))
-    if coords.size == 0:
+    coords = np.column_stack(np.where(bw > ZERO))
+    if coords.size == EMPTY_SIZE:
         return gray
 
     angle = cv2.minAreaRect(coords)[-1]
-    angle = -(90 + angle) if angle < -45 else -angle  # noqa: PLR2004
+    angle = -(ANGLE_90 + angle) if angle < DESKEW_ANGLE_NEGATIVE_LIMIT else -angle
 
     # Skip deskew if angle is extreme (would create very thin output)
-    if abs(angle) > 45:  # noqa: PLR2004
+    if abs(angle) > DESKEW_ANGLE_LIMIT:
         return gray
 
     (h, w) = gray.shape[:2]
@@ -175,7 +192,7 @@ def deskew(gray: np.ndarray) -> np.ndarray:
     )
 
     # If deskewing made the image too thin, reject it
-    if deskewed.shape[1] < 50 or deskewed.shape[0] < 50:  # noqa: PLR2004
+    if deskewed.shape[1] < MIN_DESKEW_DIMENSION or deskewed.shape[0] < MIN_DESKEW_DIMENSION:
         return gray
 
     return deskewed
@@ -196,7 +213,7 @@ def threshold_sauvola(
     k: float = 0.2,
     r: int = 128,
 ) -> np.ndarray:
-    if window % 2 == 0:
+    if window % 2 == ZERO:
         window += 1
 
     gray_f = gray.astype(np.float32)
@@ -208,7 +225,7 @@ def threshold_sauvola(
         normalize=True,
     )
     var = mean_sq - mean * mean
-    var[var < 0] = 0
+    var[var < ZERO] = ZERO
     std = np.sqrt(var)
 
     thresh = mean * (1 + k * ((std / r) - 1))
@@ -218,7 +235,7 @@ def threshold_sauvola(
 # ----------------------------
 # Full preprocessing pipeline
 # ----------------------------
-def preprocess_image(  # noqa: PLR0913
+def preprocess_image(  # noqa: PLR0912, PLR0913, PLR0915
     input_path: str,
     upscale_factor: float = 2.0,
     threshold_method: str = "sauvola",
@@ -238,7 +255,7 @@ def preprocess_image(  # noqa: PLR0913
         raise ValueError(msg)
 
     # 0) Rotate if needed
-    if rotate != 0:
+    if rotate != ANGLE_NONE:
         bgr = rotate_image(bgr, rotate)
         _log_step(debug_log, f"after_rotate_{rotate}", bgr)
 
@@ -280,7 +297,7 @@ def preprocess_image(  # noqa: PLR0913
     _log_step(debug_log, "after_threshold", th)
 
     # Prefer dark text on light background (simple heuristic)
-    if np.mean(th) < 127:  # noqa: PLR2004
+    if np.mean(th) < MIDPOINT_INTENSITY:
         th = 255 - th
     _log_step(debug_log, "after_invert_check", th)
 
@@ -292,14 +309,14 @@ def preprocess_image(  # noqa: PLR0913
         in_run = False
         run_length = 0
         for pixel in row:
-            if pixel > 127:  # white
+            if pixel > MIDPOINT_INTENSITY:  # white
                 if not in_run:
                     in_run = True
                     run_length = 1
                 else:
                     run_length += 1
             else:
-                if in_run and 1 <= run_length <= 3:
+                if in_run and THIN_RUN_MIN <= run_length <= THIN_RUN_MAX:
                     thin_line_count += 1
                 in_run = False
                 run_length = 0
@@ -307,12 +324,16 @@ def preprocess_image(  # noqa: PLR0913
     # If more than 25% of rows are thin artifacts, apply morphological cleanup
     thin_threshold = th.shape[0] * 0.25
     if thin_line_count > thin_threshold:
-        _log_step(debug_log, f"artifact_detection: {thin_line_count} thin lines (>{thin_threshold}), applying dilate+erode", th)
+        _log_step(
+            debug_log,
+            f"artifact_detection: {thin_line_count} thin lines (>{thin_threshold}), applying dilate+erode",
+            th,
+        )
 
         if threshold_method.lower() == "sauvola":
             # For Sauvola, try Otsu first
             th = threshold_otsu(gray)
-            if np.mean(th) < 127:
+            if np.mean(th) < MIDPOINT_INTENSITY:
                 th = 255 - th
             _log_step(debug_log, "after_fallback_otsu", th)
 
@@ -330,10 +351,13 @@ def preprocess_image(  # noqa: PLR0913
         scale_x = max(1.0, min_width / float(w2))
         scale_y = max(1.0, min_height / float(h2))
         scale = max(scale_x, scale_y)
-        new_w = int(round(w2 * scale))
-        new_h = int(round(h2 * scale))
+        new_w = round(w2 * scale)
+        new_h = round(h2 * scale)
         th = cv2.resize(th, (new_w, new_h), interpolation=cv2.INTER_CUBIC)
-        click.echo(f"[WARN] Small preprocessed image upscaled to {new_w}x{new_h} for Tesseract.", err=True)
+        click.echo(
+            f"[WARN] Small preprocessed image upscaled to {new_w}x{new_h} for Tesseract.",
+            err=True,
+        )
         _log_step(debug_log, "after_upscale_for_tesseract", th)
 
     _log_step(debug_log, "RETURN_FINAL", th)
@@ -533,23 +557,19 @@ def main(  # noqa: PLR0913
             success = cv2.imwrite(str(pre_path), th, [cv2.IMWRITE_PNG_COMPRESSION, 9])
 
             if debug_log:
-                with open(debug_log, "a") as f:
-                    f.write(f"[main] returned image shape: {th.shape}\n")
-                    f.write(f"[main] cv2.imwrite returned: {success}\n")
+                debug_path = Path(debug_log)
+                with debug_path.open("a", encoding="utf-8") as debug_file:
+                    debug_file.write(f"[main] returned image shape: {th.shape}\n")
+                    debug_file.write(f"[main] cv2.imwrite returned: {success}\n")
 
-                    if Path(pre_path).exists():
-                        file_size = Path(pre_path).stat().st_size
+                    if pre_path.exists():
+                        file_size = pre_path.stat().st_size
                         verify_img = cv2.imread(str(pre_path), cv2.IMREAD_GRAYSCALE)
-                        f.write(f"[main] saved to {pre_path}, size={file_size} bytes\n")
-                        f.write(f"[main] verified read: shape={verify_img.shape if verify_img is not None else 'FAILED'}\n")
+                        debug_file.write(f"[main] saved to {pre_path}, size={file_size} bytes\n")
+                        verify_shape = verify_img.shape if verify_img is not None else "FAILED"
+                        debug_file.write(f"[main] verified read: shape={verify_shape}\n")
 
-                        # Also check with identify command
-                        import subprocess as sp
-                        try:
-                            result = sp.run(["identify", str(pre_path)], check=False, capture_output=True, text=True, timeout=5)
-                            f.write(f"[main] identify output: {result.stdout.strip()}\n")
-                        except Exception as e:
-                            f.write(f"[main] identify failed: {e}\n")
+                        # Extra validation can be added here if needed.
 
             run_tesseract(str(pre_path), str(out_base), lang=lang, psm=psm, oem=oem)
 

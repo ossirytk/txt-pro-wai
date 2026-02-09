@@ -2,7 +2,7 @@
 __pycache__/
 *.py[codz]
 *$py.class
-
+*:Zone.Identifier
 # C extensions
 *.so
 
@@ -12,6 +12,7 @@ src_images/
 image_output/
 output/
 src_text/
+subs_output/
 text_output/
 build/
 develop-eggs/

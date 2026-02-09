@@ -67,7 +67,7 @@ lint.select = [
     "FURB",
     "RUF",
 ]
-lint.ignore = ["FBT001", "G004"]
+lint.ignore = ["FBT001", "G004", "COM812"]
 lint.unfixable = [
     # Don't touch unused imports
     "F401",
