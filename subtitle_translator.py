@@ -1,4 +1,4 @@
-import sys
+from collections.abc import Iterator
 from pathlib import Path
 
 import click
@@ -10,47 +10,55 @@ try:
 except Exception:  # pragma: no cover - optional dependency
     tqdm = None
 
+SubtitleItem = dict[str, str | int]
+MIN_SUBTITLE_LINES = 2
+
 
 def _read_subtitle_file(subs: Path) -> str:
     """Read and validate subtitle file."""
     if not subs.exists():
-        logger.error(f"File not found: {subs}")
-        sys.exit(1)
+        msg = f"File not found: {subs}"
+        logger.error(msg)
+        raise click.ClickException(msg)
     if not subs.is_file():
-        logger.error(f"Path is not a file: {subs}")
-        sys.exit(1)
+        msg = f"Path is not a file: {subs}"
+        logger.error(msg)
+        raise click.ClickException(msg)
 
     logger.info(f"Reading subs from {subs}")
     try:
-        with subs.open(encoding="utf8") as sub_file:
+        with subs.open(encoding="utf-8") as sub_file:
             raw_subtitles = sub_file.read()
             logger.debug("Read subs")
-    except UnicodeDecodeError:
-        logger.error(f"Failed to decode {subs} as UTF-8")
-        sys.exit(1)
-    except OSError as e:
-        logger.error(f"Error reading file: {e}")
-        sys.exit(1)
+    except UnicodeDecodeError as exc:
+        msg = f"Failed to decode {subs} as UTF-8"
+        logger.error(msg)
+        raise click.ClickException(msg) from exc
+    except OSError as exc:
+        msg = f"Error reading file: {exc}"
+        logger.error(msg)
+        raise click.ClickException(msg) from exc
 
     if not raw_subtitles.strip():
-        logger.error("Subtitle file is empty")
-        sys.exit(1)
+        msg = "Subtitle file is empty"
+        logger.error(msg)
+        raise click.ClickException(msg)
 
     return raw_subtitles
 
 
-def _parse_subtitles(raw_subtitles: str) -> tuple[list[dict], list[str]]:
+def _parse_subtitles(raw_subtitles: str) -> tuple[list[SubtitleItem], list[str]]:
     """Parse subtitles into items and content lines."""
     subtitle_items = raw_subtitles.split("\n\n")
-    total_items = []
-    all_lines = []
+    total_items: list[SubtitleItem] = []
+    all_lines: list[str] = []
 
     logger.info(f"Translating {len(subtitle_items)} items")
     for idx, item in enumerate(subtitle_items):
         if not item.strip():
             continue
         lines = item.split("\n")
-        if len(lines) < 2:
+        if len(lines) < MIN_SUBTITLE_LINES:
             logger.warning(f"Subtitle item {idx} has insufficient lines, skipping")
             continue
 
@@ -61,25 +69,25 @@ def _parse_subtitles(raw_subtitles: str) -> tuple[list[dict], list[str]]:
             logger.warning(f"Subtitle item {idx} has no content lines, skipping")
             continue
         all_lines.extend(lines)
-        sub_dict = {"sub_id": sub_id, "sub_time": sub_time, "line_number": line_number}
-        total_items.append(sub_dict)
+        total_items.append({"sub_id": sub_id, "sub_time": sub_time, "line_number": line_number})
 
     if not all_lines:
-        logger.error("No valid subtitle lines found")
-        sys.exit(1)
+        msg = "No valid subtitle lines found"
+        logger.error(msg)
+        raise click.ClickException(msg)
 
     return total_items, all_lines
 
 
 def _write_translated_subtitles(
     output_path: Path,
-    total_items: list[dict],
+    total_items: list[SubtitleItem],
     translated_lines: list[str],
 ) -> None:
     """Write translated subtitles to output file."""
     try:
         index = 0
-        with output_path.open("w", encoding="utf8") as out:
+        with output_path.open("w", encoding="utf-8") as out:
             for subtitle_item in total_items:
                 out.write(subtitle_item["sub_id"] + "\n")
                 out.write(subtitle_item["sub_time"] + "\n")
@@ -87,12 +95,13 @@ def _write_translated_subtitles(
                     out.write(translated_lines[index] + "\n")
                     index += 1
                 out.write("\n")
-    except OSError as e:
-        logger.error(f"Error writing output file: {e}")
-        sys.exit(1)
+    except OSError as exc:
+        msg = f"Error writing output file: {exc}"
+        logger.error(msg)
+        raise click.ClickException(msg) from exc
 
 
-def _batched_lines(lines: list[str], batch_size: int):
+def _batched_lines(lines: list[str], batch_size: int) -> Iterator[list[str]]:
     """Yield successive batches of `batch_size` from `lines`."""
     for i in range(0, len(lines), batch_size):
         yield lines[i : i + batch_size]
@@ -110,7 +119,7 @@ def _split_line_by_chars(line: str, limit: int) -> list[str]:
     return parts
 
 
-def _batched_by_chars(lines: list[str], max_chars: int, safety: float):
+def _batched_by_chars(lines: list[str], max_chars: int, safety: float) -> Iterator[list[str]]:
     """Yield sub-batches of `lines` whose joined character length stays under limit.
 
     Uses `safety` (0..1) to leave a margin under `max_chars`.
@@ -119,8 +128,8 @@ def _batched_by_chars(lines: list[str], max_chars: int, safety: float):
     batch: list[str] = []
     batch_len = 0
     for line in lines:
-        l = line.strip()
-        l_len = len(l) if l else 1
+        stripped_line = line.strip()
+        l_len = len(stripped_line) if stripped_line else 1
 
         if l_len > effective:
             # flush current batch
@@ -129,7 +138,7 @@ def _batched_by_chars(lines: list[str], max_chars: int, safety: float):
                 batch = []
                 batch_len = 0
             # split the too-long line into pieces
-            for part in _split_line_by_chars(l, effective):
+            for part in _split_line_by_chars(stripped_line, effective):
                 yield [part]
             continue
 
@@ -137,10 +146,10 @@ def _batched_by_chars(lines: list[str], max_chars: int, safety: float):
         sep = 1 if batch else 0
         if batch_len + l_len + sep > effective:
             yield batch
-            batch = [l]
+            batch = [stripped_line]
             batch_len = l_len
         else:
-            batch.append(l)
+            batch.append(stripped_line)
             batch_len += l_len + sep
 
     if batch:
@@ -148,7 +157,7 @@ def _batched_by_chars(lines: list[str], max_chars: int, safety: float):
 
 
 @click.command()
-@click.argument("filename", type=click.Path(exists=True))
+@click.argument("filename", type=click.Path(exists=True, dir_okay=False, path_type=Path))
 @click.option(
     "--batch-size",
     type=int,
@@ -164,80 +173,71 @@ def _batched_by_chars(lines: list[str], max_chars: int, safety: float):
     type=int,
     default=4000,
     show_default=True,
-    help=(
-        "Maximum characters per request accepted by the translator (soft limit)."
-    ),
+    help=("Maximum characters per request accepted by the translator (soft limit)."),
 )
 @click.option(
     "--safety",
     type=float,
     default=0.9,
     show_default=True,
-    help=(
-        "Safety multiplier (0..1) applied to `--max-chars` to avoid hitting limits."
-    ),
+    help=("Safety multiplier (0..1) applied to `--max-chars` to avoid hitting limits."),
 )
-def translate(filename: str, batch_size: int, max_chars: int, safety: float) -> None:
+def translate(filename: Path, batch_size: int, max_chars: int, safety: float) -> None:
     """
     Translate an English Subtitles file into Finnish.
     Run with python -m subtitle_translator <path to sub file>
     """
+    logger.info("Subs translation started")
+    raw_subtitles = _read_subtitle_file(filename)
+    total_items, all_lines = _parse_subtitles(raw_subtitles)
+
+    translator = GoogleTranslator(source="en", target="fi")
     try:
-        logger.info("Subs translation started")
-        subs = Path(filename)
+        total = len(all_lines)
+        logger.info(f"Translating {total} lines with GoogleTranslator in batches")
 
-        raw_subtitles = _read_subtitle_file(subs)
-        total_items, all_lines = _parse_subtitles(raw_subtitles)
+        # Batch size controls per-request payload; adjust if needed.
+        translated_lines: list[str] = []
 
-        translator = GoogleTranslator(source="en", target="fi")
-        try:
-            total = len(all_lines)
-            logger.info(f"Translating {total} lines with GoogleTranslator in batches")
+        batches = list(_batched_lines(all_lines, batch_size))
 
-            # Batch size controls per-request payload; adjust if needed.
-            translated_lines: list[str] = []
-
-            batches = list(_batched_lines(all_lines, batch_size))
-
-            if tqdm is not None:
-                pbar = tqdm(total=len(batches), desc="Translating batches", unit="batch")
-                try:
-                    for batch in batches:
-                        # further split by chars/safety to avoid API size limits
-                        for sub in _batched_by_chars(batch, max_chars, safety):
-                            translated_batch = translator.translate_batch(batch=sub)
-                            translated_lines.extend(translated_batch)
-                        pbar.update(1)
-                finally:
-                    pbar.close()
-            else:
-                for idx, batch in enumerate(batches, start=1):
+        if tqdm is not None:
+            pbar = tqdm(total=len(batches), desc="Translating batches", unit="batch")
+            try:
+                for batch in batches:
+                    # further split by chars/safety to avoid API size limits
                     for sub in _batched_by_chars(batch, max_chars, safety):
                         translated_batch = translator.translate_batch(batch=sub)
                         translated_lines.extend(translated_batch)
-                    done = len(translated_lines)
-                    pct = done / total * 100 if total else 100.0
-                    logger.info(f"Progress: {done}/{total} lines translated ({pct:.1f}%)")
+                    pbar.update(1)
+            finally:
+                pbar.close()
+        else:
+            for batch in batches:
+                for sub in _batched_by_chars(batch, max_chars, safety):
+                    translated_batch = translator.translate_batch(batch=sub)
+                    translated_lines.extend(translated_batch)
+                done = len(translated_lines)
+                pct = done / total * 100 if total else 100.0
+                logger.info(f"Progress: {done}/{total} lines translated ({pct:.1f}%)")
 
-        except Exception as e:
-            logger.error(f"Translation failed: {e}")
-            sys.exit(1)
-
-        output_filename = subs.stem + "_fin.srt"
-        output_dir = Path("subs_output")
-        output_dir.mkdir(parents=True, exist_ok=True)
-        output_path = output_dir / output_filename
-
-        _write_translated_subtitles(output_path, total_items, translated_lines)
-
-        logger.info(f"Translation completed successfully. Output saved to {output_path}")
-
-    except KeyboardInterrupt:
+    except KeyboardInterrupt as exc:
         logger.warning("Translation interrupted by user")
-        sys.exit(0)
-    except Exception as e:
-        logger.error(f"Unexpected error: {e}")
-        sys.exit(1)
+        raise click.Abort from exc
+    except Exception as exc:
+        msg = f"Translation failed: {exc}"
+        logger.error(msg)
+        raise click.ClickException(msg) from exc
+
+    output_filename = f"{filename.stem}_fin.srt"
+    output_dir = Path("subs_output")
+    output_dir.mkdir(parents=True, exist_ok=True)
+    output_path = output_dir / output_filename
+
+    _write_translated_subtitles(output_path, total_items, translated_lines)
+
+    logger.info(f"Translation completed successfully. Output saved to {output_path}")
+
 
 if __name__ == "__main__":
     translate()

@@ -15,6 +15,7 @@ colorama==0.4.6
     #   click
     #   icecream
     #   loguru
+    #   tqdm
 deep-translator==1.11.4
     # via txt-pro-wai
 executing==2.2.1
@@ -26,10 +27,12 @@ idna==3.11
 loguru==0.7.3
     # via txt-pro-wai
 numpy==2.2.6
-    # via opencv-python
+    # via
+    #   opencv-python
+    #   txt-pro-wai
 opencv-python==4.12.0.88
     # via txt-pro-wai
-pillow==12.0.0
+pillow==12.1.0
     # via txt-pro-wai
 pygments==2.19.2
     # via icecream
@@ -37,6 +40,8 @@ requests==2.32.5
     # via deep-translator
 soupsieve==2.8
     # via beautifulsoup4
+tqdm==4.67.2
+    # via txt-pro-wai
 typing-extensions==4.15.0
     # via beautifulsoup4
 urllib3==2.6.0
