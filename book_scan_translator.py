@@ -8,7 +8,7 @@ Usage:
     uv run book_scan_translator.py "photos/*.jpg" --out translated_books
 """
 
-import glob as glob_module
+import glob
 import subprocess
 from pathlib import Path
 
@@ -78,11 +78,22 @@ def _translate_text(text: str, max_chars: int, safety: float) -> str:
                 translated_parts.append(translated or chunk)
                 current_batch = []
                 current_len = 0
-            # Translate oversized paragraph in slices
-            for i in range(0, p_len, effective):
-                piece = para[i : i + effective]
+            # Translate oversized paragraph in word-boundary-aware slices
+            start = 0
+            while start < p_len:
+                end = min(start + effective, p_len)
+                if end < p_len:
+                    window = para[start:end]
+                    split_at = window.rfind(" ")
+                    if split_at > 0:
+                        end = start + split_at
+                piece = para[start:end].strip()
+                if not piece:
+                    start = end + 1
+                    continue
                 translated = translator.translate(piece)
                 translated_parts.append(translated or piece)
+                start = end
         elif current_len + p_len + sep > effective:
             # Flush and start a new batch
             chunk = "\n\n".join(current_batch)
@@ -191,14 +202,14 @@ def _translate_text(text: str, max_chars: int, safety: float) -> str:
     "--max-chars",
     default=DEFAULT_MAX_CHARS,
     show_default=True,
-    type=int,
+    type=click.IntRange(min=1),
     help="Maximum characters per translation request (soft limit).",
 )
 @click.option(
     "--safety",
     default=DEFAULT_SAFETY,
     show_default=True,
-    type=float,
+    type=click.FloatRange(0.0, 1.0),
     help="Safety multiplier (0..1) applied to --max-chars to avoid hitting API limits.",
 )
 @click.option(
@@ -223,7 +234,7 @@ def _translate_text(text: str, max_chars: int, safety: float) -> str:
     type=int,
     help="Timeout in seconds for each Tesseract OCR call (0 = no timeout).",
 )
-def main(  # noqa: PLR0912, PLR0913
+def main(  # noqa: PLR0912, PLR0913, PLR0915
     input_glob: str,
     out_dir: str,
     lang: str,
@@ -252,7 +263,7 @@ def main(  # noqa: PLR0912, PLR0913
     out_path = Path(out_dir)
     out_path.mkdir(parents=True, exist_ok=True)
 
-    imgs = sorted(glob_module.glob(input_glob))  # noqa: PTH207
+    imgs = sorted(glob.glob(input_glob))  # noqa: PTH207
     if not imgs:
         msg = f"No images found for pattern: {input_glob}"
         raise click.ClickException(msg)
@@ -260,12 +271,22 @@ def main(  # noqa: PLR0912, PLR0913
     use_perspective = not no_perspective
     rotate_int = int(rotate)
 
+    stems = [Path(p).stem for p in imgs]
+    has_duplicates = len(stems) != len(set(stems))
+    if has_duplicates:
+        click.echo(
+            "[WARN] Multiple input images share the same filename stem. "
+            "Output files will be prefixed with a page index to prevent collisions.",
+            err=True,
+        )
+
     pbar = tqdm(total=len(imgs), desc="Processing pages", unit="page") if tqdm is not None else None
 
     try:
         for idx, img_path in enumerate(imgs, 1):
             stem = Path(img_path).stem
-            pre_path = out_path / f"{stem}.pre.png"
+            output_stem = f"{idx:04d}_{stem}" if has_duplicates else stem
+            pre_path = out_path / f"{output_stem}.pre.png"
 
             try:
                 # Step 1: Preprocess image
@@ -291,18 +312,18 @@ def main(  # noqa: PLR0912, PLR0913
                 raw_text = _run_tesseract_stdout(str(pre_path), lang=lang, psm=psm, oem=oem, timeout=timeout)
 
                 if save_raw:
-                    raw_out = out_path / f"{stem}.raw.txt"
+                    raw_out = out_path / f"{output_stem}.raw.txt"
                     raw_out.write_text(raw_text, encoding="utf-8")
                     logger.info(f"Raw OCR saved to {raw_out}")
 
                 # Step 3: Translate (or save raw)
                 if no_translate:
                     output_text = raw_text
-                    out_file = out_path / f"{stem}.txt"
+                    out_file = out_path / f"{output_stem}.txt"
                 else:
                     logger.info(f"Translating text for {img_path}")
                     output_text = _translate_text(raw_text, max_chars=max_chars, safety=safety)
-                    out_file = out_path / f"{stem}_fi.txt"
+                    out_file = out_path / f"{output_stem}_fi.txt"
 
                 out_file.write_text(output_text, encoding="utf-8")
                 click.echo(f"[OK] {img_path} -> {out_file}")
@@ -310,8 +331,16 @@ def main(  # noqa: PLR0912, PLR0913
                 if not keep_pre and pre_path.exists():
                     pre_path.unlink()
 
+            except subprocess.TimeoutExpired as e:
+                click.echo(f"[TESSERACT TIMEOUT] {img_path}: {e}", err=True)
             except subprocess.CalledProcessError as e:
-                click.echo(f"[TESSERACT FAIL] {img_path}: {e}", err=True)
+                msg = str(e)
+                stderr = getattr(e, "stderr", None)
+                if stderr:
+                    if isinstance(stderr, bytes):
+                        stderr = stderr.decode(errors="ignore")
+                    msg = f"{msg}\nTesseract stderr:\n{stderr}"
+                click.echo(f"[TESSERACT FAIL] {img_path}: {msg}", err=True)
             except Exception as e:
                 click.echo(f"[FAIL] {img_path}: {e}", err=True)
 
