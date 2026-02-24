@@ -1,14 +1,18 @@
 """Book page photo scanner and translator.
 
 Scans photos of book pages using OCR (Tesseract) and translates the extracted
-text from English to Finnish using GoogleTranslator.
+text using GoogleTranslator. Defaults to English → Finnish.
 
 Usage:
     python book_scan_translator.py "photos/*.jpg"
     uv run book_scan_translator.py "photos/*.jpg" --out translated_books
 """
 
+import csv
 import glob
+import io
+import json
+import re
 import subprocess
 from pathlib import Path
 
@@ -27,10 +31,11 @@ except Exception:  # pragma: no cover - optional dependency
 
 DEFAULT_MAX_CHARS = 4000
 DEFAULT_SAFETY = 0.9
+DEFAULT_CONF_THRESHOLD = 0
 
 
-def _run_tesseract_stdout(img_path: str, lang: str, psm: int, oem: int, timeout: int | None) -> str:
-    """Run Tesseract OCR on a preprocessed image and return extracted text."""
+def _run_tesseract_tsv(img_path: str, lang: str, psm: int, oem: int, timeout: int | None) -> str:
+    """Run Tesseract OCR on a preprocessed image and return TSV output with per-word confidence data."""
     cmd = [
         "tesseract",
         img_path,
@@ -41,21 +46,100 @@ def _run_tesseract_stdout(img_path: str, lang: str, psm: int, oem: int, timeout:
         str(psm),
         "-l",
         lang,
+        "tsv",
     ]
     logger.debug(f"Running: {' '.join(cmd)}")
     result = subprocess.run(cmd, check=True, capture_output=True, text=True, timeout=timeout)  # noqa: S603
     return result.stdout
 
 
-def _translate_text(text: str, max_chars: int, safety: float) -> str:
-    """Translate English plain text to Finnish in paragraph-based chunks.
+def _parse_tsv_confidence(
+    tsv_text: str,
+    conf_threshold: int = 0,
+) -> tuple[str, float, int, int]:
+    """Parse Tesseract TSV output and extract text with confidence statistics.
+
+    Words with a confidence score below *conf_threshold* (when > 0) are replaced
+    by ``[???]`` in the returned text.
+
+    Returns:
+        A tuple of ``(text, avg_confidence, word_count, low_confidence_count)``.
+    """
+    if not tsv_text.strip():
+        return "", 0.0, 0, 0
+
+    reader = csv.DictReader(io.StringIO(tsv_text), delimiter="\t")
+
+    # Map (page_num, block_num, par_num, line_num) -> ordered word list
+    structure: dict[tuple[int, int, int, int], list[str]] = {}
+    confidences: list[float] = []
+    low_conf_count = 0
+
+    for row in reader:
+        if row.get("level") != "5":  # level 5 = word
+            continue
+        try:
+            conf = float(row.get("conf", -1))
+        except (ValueError, TypeError):
+            continue
+        word = (row.get("text") or "").strip()
+        if not word or conf < 0:
+            continue
+
+        try:
+            key = (int(row["page_num"]), int(row["block_num"]), int(row["par_num"]), int(row["line_num"]))
+        except (KeyError, ValueError):
+            continue
+
+        confidences.append(conf)
+
+        display_word = word
+        if conf_threshold > 0 and conf < conf_threshold:
+            low_conf_count += 1
+            display_word = "[???]"
+
+        if key not in structure:
+            structure[key] = []
+        structure[key].append(display_word)
+
+    # Reconstruct text preserving paragraph and line structure
+    sorted_keys = sorted(structure.keys())
+    parts: list[str] = []
+    prev_para: tuple[int, int, int] | None = None
+
+    for key in sorted_keys:
+        para = key[:3]
+        if prev_para is not None and para != prev_para:
+            parts.append("")  # blank line = paragraph break
+        parts.append(" ".join(structure[key]))
+        prev_para = para
+
+    text = "\n".join(parts)
+    avg_conf = sum(confidences) / len(confidences) if confidences else 0.0
+    return text, avg_conf, len(confidences), low_conf_count
+
+
+def _fix_hyphenation(text: str) -> str:
+    """Fix common OCR hyphenation and line-break artifacts.
+
+    - Joins end-of-line hyphenated words (e.g. ``'mo-\\nment'`` → ``'moment'``).
+    - Converts isolated single newlines within a paragraph to spaces so that
+      sentences flow correctly into the translator.
+    """
+    # Join hyphenated line-breaks: "word-\nnext" -> "wordnext"
+    # Replace lone newlines (not part of a paragraph break) with a space
+    return re.sub(r"(?<!\n)\n(?!\n)", " ", re.sub(r"(\w)-\n(\w)", r"\1\2", text))
+
+
+def _translate_text(text: str, max_chars: int, safety: float, source_lang: str = "en", target_lang: str = "fi") -> str:
+    """Translate plain text in paragraph-based chunks, respecting the translator character limit.
 
     Respects the translator character limit by batching paragraphs.
     """
     if not text.strip():
         return text
 
-    translator = GoogleTranslator(source="en", target="fi")
+    translator = GoogleTranslator(source=source_lang, target=target_lang)
     effective = int(max_chars * safety)
     paragraphs = [p.strip() for p in text.split("\n\n") if p.strip()]
 
@@ -218,6 +302,35 @@ def _translate_text(text: str, max_chars: int, safety: float) -> str:
     help="Skip translation and save raw OCR text only.",
 )
 @click.option(
+    "--source-lang",
+    default="en",
+    show_default=True,
+    help="Translation source language (ISO 639-1 code, e.g. 'en', 'de').",
+)
+@click.option(
+    "--target-lang",
+    default="fi",
+    show_default=True,
+    help="Translation target language (ISO 639-1 code, e.g. 'fi', 'sv').",
+)
+@click.option(
+    "--conf-threshold",
+    default=DEFAULT_CONF_THRESHOLD,
+    show_default=True,
+    type=click.IntRange(0, 100),
+    help="OCR confidence threshold (0-100). Words below this score are replaced with [???]. 0 disables filtering.",
+)
+@click.option(
+    "--resume",
+    is_flag=True,
+    help="Skip pages already listed in {out}/progress.json from a previous run.",
+)
+@click.option(
+    "--no-report",
+    is_flag=True,
+    help="Disable the per-page quality report (quality_report.json).",
+)
+@click.option(
     "--keep-pre",
     is_flag=True,
     help="Keep preprocessed .pre.png images after OCR.",
@@ -251,12 +364,17 @@ def main(  # noqa: PLR0912, PLR0913, PLR0915
     max_chars: int,
     safety: float,
     no_translate: bool,
+    source_lang: str,
+    target_lang: str,
+    conf_threshold: int,
+    resume: bool,
+    no_report: bool,
     keep_pre: bool,
     save_raw: bool,
     ocr_timeout: int,
 ) -> None:
     """
-    Scan book page photos with OCR and translate English text to Finnish.
+    Scan book page photos with OCR and translate text between any language pair.
 
     INPUT_GLOB example: "book_photos/*.jpg"
     """
@@ -282,11 +400,43 @@ def main(  # noqa: PLR0912, PLR0913, PLR0915
 
     pbar = tqdm(total=len(imgs), desc="Processing pages", unit="page") if tqdm is not None else None
 
+    # Resumable batch processing: load previously-completed pages (stored as resolved absolute paths)
+    progress_path = out_path / "progress.json"
+    completed_pages: set[str] = set()
+    if resume and progress_path.exists():
+        try:
+            raw = json.loads(progress_path.read_text(encoding="utf-8"))
+            completed_pages = set(raw.get("completed", []))
+            logger.info(f"Resuming: {len(completed_pages)} page(s) already completed")
+        except Exception as exc:
+            logger.warning(f"Could not load progress file: {exc}")
+
+    # Per-page quality report data; use a discard sink when reporting is disabled to keep memory bounded.
+    class _NullList(list):
+        def append(self, _item: object) -> None:  # type: ignore[override]
+            return None
+
+    quality_data: list[dict[str, object]]
+    quality_data = _NullList() if no_report else []
+
     try:
         for idx, img_path in enumerate(imgs, 1):
             stem = Path(img_path).stem
             output_stem = f"{idx:04d}_{stem}" if has_duplicates else stem
             pre_path = out_path / f"{output_stem}.pre.png"
+
+            # Resumable processing: skip already-completed pages (compare by resolved absolute path)
+            img_path_resolved = str(Path(img_path).resolve())
+            if resume and img_path_resolved in completed_pages:
+                logger.info(f"Skipping (already processed): {img_path}")
+                if pbar is not None:
+                    pbar.update(1)
+                else:
+                    logger.info(f"Progress: {idx}/{len(imgs)} pages processed")
+                continue
+
+            word_count = 0
+            avg_conf = 0.0
 
             try:
                 # Step 1: Preprocess image
@@ -306,10 +456,17 @@ def main(  # noqa: PLR0912, PLR0913, PLR0915
                     th = th.astype(np.uint8)
                 cv2.imwrite(str(pre_path), th, [cv2.IMWRITE_PNG_COMPRESSION, 9])
 
-                # Step 2: OCR
+                # Step 2: OCR with per-word confidence data
                 logger.info(f"Running OCR on {pre_path}")
                 timeout = ocr_timeout if ocr_timeout > 0 else None
-                raw_text = _run_tesseract_stdout(str(pre_path), lang=lang, psm=psm, oem=oem, timeout=timeout)
+                tsv_text = _run_tesseract_tsv(str(pre_path), lang=lang, psm=psm, oem=oem, timeout=timeout)
+                raw_text, avg_conf, word_count, low_conf_count = _parse_tsv_confidence(tsv_text, conf_threshold)
+
+                if low_conf_count:
+                    logger.warning(f"{low_conf_count} low-confidence word(s) flagged in {img_path}")
+
+                # Step 2b: Fix hyphenation and line-break artifacts
+                raw_text = _fix_hyphenation(raw_text)
 
                 if save_raw:
                     raw_out = out_path / f"{output_stem}.raw.txt"
@@ -322,8 +479,14 @@ def main(  # noqa: PLR0912, PLR0913, PLR0915
                     out_file = out_path / f"{output_stem}.txt"
                 else:
                     logger.info(f"Translating text for {img_path}")
-                    output_text = _translate_text(raw_text, max_chars=max_chars, safety=safety)
-                    out_file = out_path / f"{output_stem}_fi.txt"
+                    output_text = _translate_text(
+                        raw_text,
+                        max_chars=max_chars,
+                        safety=safety,
+                        source_lang=source_lang,
+                        target_lang=target_lang,
+                    )
+                    out_file = out_path / f"{output_stem}_{target_lang}.txt"
 
                 out_file.write_text(output_text, encoding="utf-8")
                 click.echo(f"[OK] {img_path} -> {out_file}")
@@ -331,8 +494,41 @@ def main(  # noqa: PLR0912, PLR0913, PLR0915
                 if not keep_pre and pre_path.exists():
                     pre_path.unlink()
 
+                # Update progress manifest (atomic write: temp file + rename to avoid corruption)
+                if resume:
+                    completed_pages.add(img_path_resolved)
+                    tmp_progress_path = progress_path.with_suffix(progress_path.suffix + ".tmp")
+                    tmp_progress_path.write_text(
+                        json.dumps({"completed": sorted(completed_pages)}, indent=2),
+                        encoding="utf-8",
+                    )
+                    tmp_progress_path.replace(progress_path)
+
+                quality_data.append(
+                    {
+                        "page": img_path,
+                        "word_count": word_count,
+                        "avg_confidence": round(avg_conf, 2),
+                        "chars_before_translation": len(raw_text),
+                        "chars_after_translation": len(output_text),
+                        "status": "ok",
+                        "error": None,
+                    }
+                )
+
             except subprocess.TimeoutExpired as e:
                 click.echo(f"[TESSERACT TIMEOUT] {img_path}: {e}", err=True)
+                quality_data.append(
+                    {
+                        "page": img_path,
+                        "word_count": word_count,
+                        "avg_confidence": round(avg_conf, 2),
+                        "chars_before_translation": 0,
+                        "chars_after_translation": 0,
+                        "status": "error",
+                        "error": f"Tesseract timeout: {e}",
+                    }
+                )
             except subprocess.CalledProcessError as e:
                 msg = str(e)
                 stderr = getattr(e, "stderr", None)
@@ -341,8 +537,30 @@ def main(  # noqa: PLR0912, PLR0913, PLR0915
                         stderr = stderr.decode(errors="ignore")
                     msg = f"{msg}\nTesseract stderr:\n{stderr}"
                 click.echo(f"[TESSERACT FAIL] {img_path}: {msg}", err=True)
+                quality_data.append(
+                    {
+                        "page": img_path,
+                        "word_count": word_count,
+                        "avg_confidence": round(avg_conf, 2),
+                        "chars_before_translation": 0,
+                        "chars_after_translation": 0,
+                        "status": "error",
+                        "error": msg,
+                    }
+                )
             except Exception as e:
                 click.echo(f"[FAIL] {img_path}: {e}", err=True)
+                quality_data.append(
+                    {
+                        "page": img_path,
+                        "word_count": word_count,
+                        "avg_confidence": round(avg_conf, 2),
+                        "chars_before_translation": 0,
+                        "chars_after_translation": 0,
+                        "status": "error",
+                        "error": str(e),
+                    }
+                )
 
             if pbar is not None:
                 pbar.update(1)
@@ -351,6 +569,12 @@ def main(  # noqa: PLR0912, PLR0913, PLR0915
     finally:
         if pbar is not None:
             pbar.close()
+
+    # Write per-page quality report
+    if not no_report and quality_data:
+        report_path = out_path / "quality_report.json"
+        report_path.write_text(json.dumps(quality_data, indent=2, ensure_ascii=False), encoding="utf-8")
+        click.echo(f"[REPORT] Quality report written to {report_path}")
 
 
 if __name__ == "__main__":
