@@ -34,24 +34,6 @@ DEFAULT_SAFETY = 0.9
 DEFAULT_CONF_THRESHOLD = 0
 
 
-def _run_tesseract_stdout(img_path: str, lang: str, psm: int, oem: int, timeout: int | None) -> str:
-    """Run Tesseract OCR on a preprocessed image and return extracted text."""
-    cmd = [
-        "tesseract",
-        img_path,
-        "stdout",
-        "--oem",
-        str(oem),
-        "--psm",
-        str(psm),
-        "-l",
-        lang,
-    ]
-    logger.debug(f"Running: {' '.join(cmd)}")
-    result = subprocess.run(cmd, check=True, capture_output=True, text=True, timeout=timeout)  # noqa: S603
-    return result.stdout
-
-
 def _run_tesseract_tsv(img_path: str, lang: str, psm: int, oem: int, timeout: int | None) -> str:
     """Run Tesseract OCR on a preprocessed image and return TSV output with per-word confidence data."""
     cmd = [
@@ -74,24 +56,24 @@ def _run_tesseract_tsv(img_path: str, lang: str, psm: int, oem: int, timeout: in
 def _parse_tsv_confidence(
     tsv_text: str,
     conf_threshold: int = 0,
-) -> tuple[str, float, int, list[str]]:
+) -> tuple[str, float, int, int]:
     """Parse Tesseract TSV output and extract text with confidence statistics.
 
     Words with a confidence score below *conf_threshold* (when > 0) are replaced
-    by ``[???]`` in the returned text and collected in *low_confidence_words*.
+    by ``[???]`` in the returned text.
 
     Returns:
-        A tuple of ``(text, avg_confidence, word_count, low_confidence_words)``.
+        A tuple of ``(text, avg_confidence, word_count, low_confidence_count)``.
     """
     if not tsv_text.strip():
-        return "", 0.0, 0, []
+        return "", 0.0, 0, 0
 
     reader = csv.DictReader(io.StringIO(tsv_text), delimiter="\t")
 
     # Map (page_num, block_num, par_num, line_num) -> ordered word list
     structure: dict[tuple[int, int, int, int], list[str]] = {}
     confidences: list[float] = []
-    low_conf_words: list[str] = []
+    low_conf_count = 0
 
     for row in reader:
         if row.get("level") != "5":  # level 5 = word
@@ -113,7 +95,7 @@ def _parse_tsv_confidence(
 
         display_word = word
         if conf_threshold > 0 and conf < conf_threshold:
-            low_conf_words.append(word)
+            low_conf_count += 1
             display_word = "[???]"
 
         if key not in structure:
@@ -134,7 +116,7 @@ def _parse_tsv_confidence(
 
     text = "\n".join(parts)
     avg_conf = sum(confidences) / len(confidences) if confidences else 0.0
-    return text, avg_conf, len(confidences), low_conf_words
+    return text, avg_conf, len(confidences), low_conf_count
 
 
 def _fix_hyphenation(text: str) -> str:
@@ -418,7 +400,7 @@ def main(  # noqa: PLR0912, PLR0913, PLR0915
 
     pbar = tqdm(total=len(imgs), desc="Processing pages", unit="page") if tqdm is not None else None
 
-    # Resumable batch processing: load previously-completed pages
+    # Resumable batch processing: load previously-completed pages (stored as resolved absolute paths)
     progress_path = out_path / "progress.json"
     completed_pages: set[str] = set()
     if resume and progress_path.exists():
@@ -429,8 +411,13 @@ def main(  # noqa: PLR0912, PLR0913, PLR0915
         except Exception as exc:
             logger.warning(f"Could not load progress file: {exc}")
 
-    # Per-page quality report data
-    quality_data: list[dict[str, object]] = []
+    # Per-page quality report data; use a discard sink when reporting is disabled to keep memory bounded.
+    class _NullList(list):
+        def append(self, _item: object) -> None:  # type: ignore[override]
+            return None
+
+    quality_data: list[dict[str, object]]
+    quality_data = _NullList() if no_report else []
 
     try:
         for idx, img_path in enumerate(imgs, 1):
@@ -438,8 +425,9 @@ def main(  # noqa: PLR0912, PLR0913, PLR0915
             output_stem = f"{idx:04d}_{stem}" if has_duplicates else stem
             pre_path = out_path / f"{output_stem}.pre.png"
 
-            # Resumable processing: skip already-completed pages
-            if resume and img_path in completed_pages:
+            # Resumable processing: skip already-completed pages (compare by resolved absolute path)
+            img_path_resolved = str(Path(img_path).resolve())
+            if resume and img_path_resolved in completed_pages:
                 logger.info(f"Skipping (already processed): {img_path}")
                 if pbar is not None:
                     pbar.update(1)
@@ -472,10 +460,10 @@ def main(  # noqa: PLR0912, PLR0913, PLR0915
                 logger.info(f"Running OCR on {pre_path}")
                 timeout = ocr_timeout if ocr_timeout > 0 else None
                 tsv_text = _run_tesseract_tsv(str(pre_path), lang=lang, psm=psm, oem=oem, timeout=timeout)
-                raw_text, avg_conf, word_count, low_conf_words = _parse_tsv_confidence(tsv_text, conf_threshold)
+                raw_text, avg_conf, word_count, low_conf_count = _parse_tsv_confidence(tsv_text, conf_threshold)
 
-                if low_conf_words:
-                    logger.warning(f"{len(low_conf_words)} low-confidence word(s) flagged in {img_path}")
+                if low_conf_count:
+                    logger.warning(f"{low_conf_count} low-confidence word(s) flagged in {img_path}")
 
                 # Step 2b: Fix hyphenation and line-break artifacts
                 raw_text = _fix_hyphenation(raw_text)
@@ -506,13 +494,15 @@ def main(  # noqa: PLR0912, PLR0913, PLR0915
                 if not keep_pre and pre_path.exists():
                     pre_path.unlink()
 
-                # Update progress manifest
+                # Update progress manifest (atomic write: temp file + rename to avoid corruption)
                 if resume:
-                    completed_pages.add(img_path)
-                    progress_path.write_text(
+                    completed_pages.add(img_path_resolved)
+                    tmp_progress_path = progress_path.with_suffix(progress_path.suffix + ".tmp")
+                    tmp_progress_path.write_text(
                         json.dumps({"completed": sorted(completed_pages)}, indent=2),
                         encoding="utf-8",
                     )
+                    tmp_progress_path.replace(progress_path)
 
                 quality_data.append(
                     {
