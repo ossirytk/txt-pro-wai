@@ -19,18 +19,16 @@ from pathlib import Path
 import click
 import cv2
 import numpy as np
-from deep_translator import GoogleTranslator
 from loguru import logger
 
 from image_clean import preprocess_image
+from translation_utils import DEFAULT_MAX_CHARS, DEFAULT_SAFETY, translate_paragraph_text
 
 try:
     from tqdm.auto import tqdm  # optional progress bar
 except Exception:  # pragma: no cover - optional dependency
     tqdm = None
 
-DEFAULT_MAX_CHARS = 4000
-DEFAULT_SAFETY = 0.9
 DEFAULT_CONF_THRESHOLD = 0
 
 
@@ -129,72 +127,6 @@ def _fix_hyphenation(text: str) -> str:
     # Join hyphenated line-breaks: "word-\nnext" -> "wordnext"
     # Replace lone newlines (not part of a paragraph break) with a space
     return re.sub(r"(?<!\n)\n(?!\n)", " ", re.sub(r"(\w)-\n(\w)", r"\1\2", text))
-
-
-def _translate_text(text: str, max_chars: int, safety: float, source_lang: str = "en", target_lang: str = "fi") -> str:
-    """Translate plain text in paragraph-based chunks, respecting the translator character limit.
-
-    Respects the translator character limit by batching paragraphs.
-    """
-    if not text.strip():
-        return text
-
-    translator = GoogleTranslator(source=source_lang, target=target_lang)
-    effective = int(max_chars * safety)
-    paragraphs = [p.strip() for p in text.split("\n\n") if p.strip()]
-
-    if not paragraphs:
-        return text
-
-    translated_parts: list[str] = []
-    current_batch: list[str] = []
-    current_len = 0
-
-    for para in paragraphs:
-        p_len = len(para)
-        sep = 2 if current_batch else 0
-
-        if p_len > effective:
-            # Flush current batch before handling oversized paragraph
-            if current_batch:
-                chunk = "\n\n".join(current_batch)
-                translated = translator.translate(chunk)
-                translated_parts.append(translated or chunk)
-                current_batch = []
-                current_len = 0
-            # Translate oversized paragraph in word-boundary-aware slices
-            start = 0
-            while start < p_len:
-                end = min(start + effective, p_len)
-                if end < p_len:
-                    window = para[start:end]
-                    split_at = window.rfind(" ")
-                    if split_at > 0:
-                        end = start + split_at
-                piece = para[start:end].strip()
-                if not piece:
-                    start = end + 1
-                    continue
-                translated = translator.translate(piece)
-                translated_parts.append(translated or piece)
-                start = end
-        elif current_len + p_len + sep > effective:
-            # Flush and start a new batch
-            chunk = "\n\n".join(current_batch)
-            translated = translator.translate(chunk)
-            translated_parts.append(translated or chunk)
-            current_batch = [para]
-            current_len = p_len
-        else:
-            current_batch.append(para)
-            current_len += p_len + sep
-
-    if current_batch:
-        chunk = "\n\n".join(current_batch)
-        translated = translator.translate(chunk)
-        translated_parts.append(translated or chunk)
-
-    return "\n\n".join(translated_parts)
 
 
 @click.command(context_settings={"help_option_names": ["-h", "--help"]})
@@ -479,7 +411,7 @@ def main(  # noqa: PLR0912, PLR0913, PLR0915
                     out_file = out_path / f"{output_stem}.txt"
                 else:
                     logger.info(f"Translating text for {img_path}")
-                    output_text = _translate_text(
+                    output_text = translate_paragraph_text(
                         raw_text,
                         max_chars=max_chars,
                         safety=safety,
