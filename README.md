@@ -10,21 +10,27 @@ Text processing with AI.
 
 ## Usage
 
+Primary development workflow:
+
+- Open the repository from the Windows dev drive in VS Code.
+- Use the integrated PowerShell terminal for `uv run ...` commands.
+- WSL/Ubuntu remains a supported alternative if you still use it.
+
 Translate subtitles:
 
-```bash
+```powershell
 uv run subtitle_translator.py path/to/subtitles.srt
 ```
 
 Translate scanned book page images:
 
-```bash
+```powershell
 uv run book_scan_translator.py "photos/*.jpg"
 ```
 
 Translate an ebook file:
 
-```bash
+```powershell
 uv run ebook_translator.py path/to/book.epub
 ```
 

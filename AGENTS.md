@@ -1,6 +1,7 @@
 # AGENTS.md — Project Rules for AI Assistants (Python + Rust Workspace)
 
-This repository is developed using VS Code and NvChad Neovim.  
+This repository is currently developed primarily from a **Windows dev drive** using **PowerShell** and **VS Code**.  
+**WSL/Ubuntu**, `fish`, and **NvChad Neovim** remain supported alternative workflows.  
 Contributors run tooling from the terminal. Prefer CLI-first workflows and
 keep diffs minimal, deterministic, and compliant with the repo’s tooling rules.
 
@@ -23,7 +24,7 @@ VS Code’s agentic AI features can apply multi-file coordinated changes, so the
 - If a `rustfmt.toml` exists, treat it as the single source of truth.
 
 ### Cross-Editor Compatibility
-- Contributors use VS Code and Neovim.  
+- Contributors primarily use VS Code and still support Neovim workflows.  
 - All changes must be reproducible via terminal commands.
 
 ---

@@ -1,8 +1,9 @@
 # Copilot Instructions
 
 This repository is a Python project for processing subtitles and images.
-It is developed using VS Code and NvChad Neovim; prefer CLI-first workflows
-and keep diffs minimal, deterministic, and compliant with the tooling rules below.
+It is currently developed primarily from a Windows dev drive using PowerShell and VS Code.
+WSL/Ubuntu, `fish`, and NvChad Neovim remain supported alternative workflows.
+Prefer CLI-first workflows and keep diffs minimal, deterministic, and compliant with the tooling rules below.
 
 ---
 
